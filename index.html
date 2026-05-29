@@ -20,6 +20,8 @@
     .logo{display:flex;align-items:center;gap:12px}
     .logo span{display:block;font-size:12px;color:#4a5568;margin-top:2px;}
     .nav-links{display:flex;gap:20px;font-size:14px;color:#4a5568;font-weight:500;}
+    .menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(0,0,51,.12);border-radius:12px;background:#fff;color:#000033;cursor:pointer;font-size:18px}
+    .menu-toggle:focus{outline:2px solid #b30000;outline-offset:3px}
 
     /* HERO */
     
@@ -70,9 +72,12 @@
     @media(max-width:760px){
       .about-grid,.contact-grid{grid-template-columns:1fr}
       .cta{flex-direction:column;padding:32px 24px;text-align:center}
-      nav{flex-direction:column;align-items:flex-start;row-gap:12px}
-      .nav-links{display:flex;flex-direction:column;gap:12px;width:100%;font-size:15px;color:#4a5568;justify-content:center}
-      .nav-links a{padding:8px 0}
+      nav{position:relative;flex-direction:row;align-items:center;justify-content:space-between}
+      .menu-toggle{display:flex}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#f4f7f9;padding:16px 20px;border-bottom:1px solid rgba(0,0,51,.08);box-shadow:0 8px 24px rgba(0,0,51,.08);}
+      .nav-links.open{display:flex}
+      .nav-links a{display:block;padding:12px 0;border-bottom:1px solid rgba(0,0,51,.08)}
+      .nav-links a:last-child{border-bottom:none}
     }
   
     /* SCROLL HERO */
@@ -181,7 +186,8 @@
         <span>PVC &amp; EVA Footwear Manufacturer</span>
       </div>
     </div>
-    <div class="nav-links">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu()">☰</button>
+    <div class="nav-links" id="mobileNav">
       <a href="#products" onclick="showProductsModal(event)">Products</a>
       <a href="#about">About us</a>
       <a href="#contact">Contact us</a>
@@ -301,6 +307,13 @@
 
   function closeProductsModal() {
     document.getElementById('productsModal').classList.remove('show');
+  }
+
+  function toggleMobileMenu() {
+    const nav = document.getElementById('mobileNav');
+    const button = document.querySelector('.menu-toggle');
+    const isOpen = nav.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 
   window.addEventListener('click', (e) => {
