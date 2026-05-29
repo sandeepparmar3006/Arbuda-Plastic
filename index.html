@@ -57,7 +57,7 @@
     .contact-card small{display:block;margin-top:12px;font-size:13px;color:#718096}
 
     /* CTA BAND */
-    .cta{margin:0 0 72px;background:linear-gradient(135deg,#000033,#1a2b4c);border-radius:24px;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 20px 60px rgba(0,0,51,.2)}
+    .cta{margin:72px 0 72px;background:linear-gradient(135deg,#000033,#1a2b4c);border-radius:24px;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 20px 60px rgba(0,0,51,.2)}
     .cta h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;letter-spacing:-.02em;margin-bottom:0}
     .cta p{color:rgba(255,255,255,.76);margin-top:8px}
     .cta .btn{background:#fff;color:#b30000;border:none}
@@ -106,6 +106,63 @@
       100% { transform: scaleY(0); transform-origin: bottom; }
     }
 
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.show {
+      display: flex;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 48px;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 500px;
+      box-shadow: 0 20px 60px rgba(0, 0, 51, 0.2);
+      animation: slideIn 0.3s ease;
+    }
+    .modal-content h3 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: 28px;
+      color: #000033;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .modal-content p {
+      font-size: 16px;
+      color: #4a5568;
+      margin-bottom: 32px;
+    }
+    .modal .btn {
+      background: #b30000;
+      color: #fff;
+      border: none;
+    }
+    .modal .btn:hover {
+      background: #990000;
+    }
+    @keyframes slideIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -123,8 +180,9 @@
       </div>
     </div>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#products" onclick="showProductsModal(event)">Products</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact us</a>
     </div>
   </nav>
 </header>
@@ -216,6 +274,15 @@
 
 </main>
 
+<!-- PRODUCTS MODAL -->
+<div id="productsModal" class="modal">
+  <div class="modal-content">
+    <h3>Products Brochure</h3>
+    <p>Our full products brochure is coming soon. Please reach out directly for current offerings and specifications.</p>
+    <button class="btn fill" onclick="closeProductsModal()">Got it</button>
+  </div>
+</div>
+
 <footer>
   <div class="wrap foot">
     <span>© Arbuda Plastic</span>
@@ -225,6 +292,22 @@
 
 
 <script>
+  function showProductsModal(e) {
+    e.preventDefault();
+    document.getElementById('productsModal').classList.add('show');
+  }
+
+  function closeProductsModal() {
+    document.getElementById('productsModal').classList.remove('show');
+  }
+
+  window.addEventListener('click', (e) => {
+    const modal = document.getElementById('productsModal');
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const fadeDistance = 400; // pixels over which the fade happens
