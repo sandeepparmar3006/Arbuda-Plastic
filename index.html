@@ -22,6 +22,9 @@
     .nav-links{display:flex;gap:20px;font-size:14px;color:#4a5568;font-weight:500;}
     .menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(0,0,51,.12);border-radius:12px;background:#fff;color:#000033;cursor:pointer;font-size:18px}
     .menu-toggle:focus{outline:2px solid #b30000;outline-offset:3px}
+    .scroll-top{position:fixed;right:24px;bottom:24px;z-index:1000;display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#b30000;color:#fff;font-size:16px;border:none;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,51,.18);transition:transform .2s ease,opacity .2s ease}
+    .scroll-top.show{display:flex;opacity:1;transform:translateY(0)}
+    .scroll-top:hover{transform:translateY(-2px);background:#990000}
 
     /* HERO */
     
@@ -172,12 +175,11 @@
 
   </style>
 </head>
-<body>
+<body id="top">
 
 <header>
   <nav>
-    <div class="logo">
-      
+    <a href="#top" class="logo" onclick="scrollToTop(event)">
       <div>
         <strong style="display: flex; align-items: center; gap: 6px;">
           <span style="color: #000033; font-style: italic; font-weight: 900; font-size: 20px; letter-spacing: 0.02em;">KABP</span>
@@ -185,7 +187,7 @@
         </strong>
         <span>PVC &amp; EVA Footwear Manufacturer</span>
       </div>
-    </div>
+    </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu()">☰</button>
     <div class="nav-links" id="mobileNav">
       <a href="#products" onclick="showProductsModal(event)">Products</a>
@@ -298,6 +300,7 @@
   </div>
 </footer>
 
+<button class="scroll-top" type="button" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
 <script>
   function showProductsModal(e) {
@@ -307,6 +310,11 @@
 
   function closeProductsModal() {
     document.getElementById('productsModal').classList.remove('show');
+  }
+
+  function scrollToTop(e) {
+    if (e) e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function toggleMobileMenu() {
@@ -331,6 +339,7 @@
     const bg = document.querySelector('.hero-bg');
     const content = document.querySelector('.hero-content');
     const hint = document.querySelector('.scroll-hint');
+    const topButton = document.querySelector('.scroll-top');
 
     if (bg) bg.style.opacity = 1 - (progress * 1); // fades out
     if (content) {
@@ -339,6 +348,9 @@
     }
     if (hint) {
       hint.style.opacity = 1 - (progress * 2); // fades out twice as fast
+    }
+    if (topButton) {
+      topButton.classList.toggle('show', scrollY > 300);
     }
   });
   // Trigger once to set initial state correctly if reloaded partway down
