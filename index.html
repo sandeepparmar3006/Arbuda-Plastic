@@ -172,6 +172,113 @@
         opacity: 1;
       }
     }
+    .product-showcase-band{
+      width:min(1080px,calc(100% - 40px));
+      margin:20px auto 0;
+      padding:28px 0 0;
+    }
+
+    .product-showcase-band .band-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:16px;
+    }
+
+    .product-showcase-band .band-head h2{
+      margin:0;
+      font-size:24px;
+      line-height:1.1;
+    }
+
+    .product-showcase-band .band-head p{
+      margin:0;
+      color:#6b7280;
+      font-size:14px;
+    }
+
+    .product-showcase-band .band-viewport{
+      overflow:hidden;
+      border-radius:20px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(0,0,51,.08);
+      box-shadow:0 14px 30px rgba(0,0,0,.06);
+      min-height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .product-showcase-band .band-track{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      padding:24px 16px;
+      width:max-content;
+      animation:scrollProducts 24s linear infinite;
+    }
+
+    .product-showcase-band .band-viewport:hover .band-track,
+    .product-showcase-band .band-viewport:active .band-track,
+    .product-showcase-band .band-viewport:focus-within .band-track{
+      animation-play-state:paused;
+    }
+
+    .product-showcase-band .product-card{
+      flex:0 0 auto;
+      width:min(340px, calc(100vw - 80px));
+      display:flex;
+      align-items:center;
+      gap:20px;
+      padding:20px;
+      border-radius:20px;
+      background:#fff;
+      border:1px solid rgba(0,0,51,.08);
+      min-height:180px;
+    }
+
+    .product-showcase-band .product-card img{
+      width:120px;
+      height:120px;
+      border-radius:20px;
+      object-fit:cover;
+      background:#f3f4f6;
+      flex:0 0 auto;
+    }
+
+    .product-showcase-band .product-card .name{
+      margin:0 0 4px;
+      font-size:15px;
+      font-weight:700;
+    }
+
+    .product-showcase-band .product-card .sub{
+      margin:0;
+      font-size:12px;
+      color:#6b7280;
+    }
+
+    @keyframes scrollProducts{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    @media (max-width: 768px){
+      .product-showcase-band{
+        width:min(100%,calc(100% - 24px));
+      }
+      .product-showcase-band .product-card{
+        width:min(280px, calc(100vw - 48px));
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+      }
+      .product-showcase-band .product-card img{
+        width:140px;
+        height:140px;
+      }
+    }
 
   </style>
 </head>
@@ -220,7 +327,132 @@
   </section>
 
   <hr class="divider">
+    <!-- Product Scroll Wheel -->  
+      <section class="product-showcase-band" aria-label="Products showcase popular sellers">
+        <div class="band-head">
+          <div>
+            <h2>Products Showcase</h2>
+            <p>Popular sellers</p>
+          </div>
+        </div>
 
+        <div class="band-viewport">
+          <div class="band-track">
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f0f7ff/111827?text=Dr+Rani" alt="Dr rani">
+              <div>
+                <p class="name">Dr Rani</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/fff5ef/111827?text=Tarzan" alt="Tarzan">
+              <div>
+                <p class="name">Tarzan</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f2fff4/111827?text=Apple" alt="Apple">
+              <div>
+                <p class="name">Apple</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f7f1ff/111827?text=Storm" alt="Storm">
+              <div>
+                <p class="name">Storm</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/eff9ff/111827?text=Kavya" alt="Kavya">
+              <div>
+                <p class="name">Kavya</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/fff8e8/111827?text=Roma+Sandal" alt="Roma sandal">
+              <div>
+                <p class="name">Roma sandal</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/e8f0ff/111827?text=School+Shoes" alt="School shoes black">
+              <div>
+                <p class="name">School Shoes Black</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f0fff8/111827?text=School+Sandal" alt="School sandal">
+              <div>
+                <p class="name">School Sandal</p>
+              </div>
+            </div>
+
+            <!-- duplicate set for seamless loop -->
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f0f7ff/111827?text=Dr+Rani" alt="Dr rani">
+              <div>
+                <p class="name">Dr Rani</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/fff5ef/111827?text=Tarzan" alt="Tarzan">
+              <div>
+                <p class="name">Tarzan</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f2fff4/111827?text=Apple" alt="Apple">
+              <div>
+                <p class="name">Apple</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f7f1ff/111827?text=Storm" alt="Storm">
+              <div>
+                <p class="name">Storm</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/eff9ff/111827?text=Kavya" alt="Kavya">
+              <div>
+                <p class="name">Kavya</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/fff8e8/111827?text=Roma+Sandal" alt="Roma sandal">
+              <div>
+                <p class="name">Roma Sandal</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/e8f0ff/111827?text=School+Shoes" alt="School shoes black">
+              <div>
+                <p class="name">School Shoes Black</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="https://placehold.co/160x160/f0fff8/111827?text=School+Sandal" alt="School sandal">
+              <div>
+                <p class="name">School Sandal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="wrap">
