@@ -201,10 +201,10 @@
     .product-showcase-band .band-viewport{
       overflow:hidden;
       border-radius:20px;
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.88);
       border:1px solid rgba(0,0,51,.08);
       box-shadow:0 14px 30px rgba(0,0,0,.06);
-      min-height:260px;
+      min-height:360px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -213,8 +213,8 @@
     .product-showcase-band .band-track{
       display:flex;
       align-items:center;
-      gap:22px;
-      padding:24px 16px;
+      gap:26px;
+      padding:32px 20px;
       width:max-content;
       animation:scrollProducts 24s linear infinite;
     }
@@ -227,29 +227,32 @@
 
     .product-showcase-band .product-card{
       flex:0 0 auto;
-      width:min(340px, calc(100vw - 80px));
+      width:min(280px, calc(100vw - 80px));
       display:flex;
+      flex-direction:column;
       align-items:center;
-      gap:20px;
-      padding:20px;
-      border-radius:20px;
+      justify-content:center;
+      gap:14px;
+      padding:24px 18px;
+      border-radius:24px;
       background:#fff;
       border:1px solid rgba(0,0,51,.08);
-      min-height:180px;
+      min-height:320px;
+      text-align:center;
     }
 
     .product-showcase-band .product-card img{
-      width:120px;
-      height:120px;
-      border-radius:20px;
-      object-fit:cover;
+      width:200px;
+      height:200px;
+      border-radius:24px;
+      object-fit:contain;
       background:#f3f4f6;
       flex:0 0 auto;
     }
 
     .product-showcase-band .product-card .name{
-      margin:0 0 4px;
-      font-size:15px;
+      margin:0;
+      font-size:16px;
       font-weight:700;
     }
 
@@ -269,14 +272,14 @@
         width:min(100%,calc(100% - 24px));
       }
       .product-showcase-band .product-card{
-        width:min(280px, calc(100vw - 48px));
+        width:min(260px, calc(100vw - 48px));
         flex-direction:column;
         align-items:center;
         text-align:center;
       }
       .product-showcase-band .product-card img{
-        width:140px;
-        height:140px;
+        width:180px;
+        height:180px;
       }
     }
 
@@ -388,11 +391,12 @@
             </div>
 
             <div class="product-card">
-              <img src="https://placehold.co/160x160/f0fff8/111827?text=School+Sandal" alt="School sandal">
+              <img src="School King.PNG" alt="School King">
               <div>
-                <p class="name">School Sandal</p>
+                <p class="name">School King</p>
               </div>
             </div>
+
 
             <!-- duplicate set for seamless loop -->
             <div class="product-card">
@@ -445,11 +449,12 @@
             </div>
 
             <div class="product-card">
-              <img src="https://placehold.co/160x160/f0fff8/111827?text=School+Sandal" alt="School sandal">
+              <img src="School King.PNG" alt="School King">
               <div>
-                <p class="name">School Sandal</p>
+                <p class="name">School King</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
