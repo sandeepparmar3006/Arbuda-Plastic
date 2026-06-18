@@ -3,685 +3,1132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arbuda Plastic | PVC & EVA Footwear Manufacturer</title>
-  <meta name="description" content="Arbuda Plastic is a Vasai-based manufacturer and bulk wholesaler of PVC and EVA footwear." />
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <!-- Preload hero background image to prevent loading delay -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2000&auto=format&fit=crop" fetchpriority="high">
+  <title>Arbuda Plastic | PVC & EVA Footwear Manufacturer – Vasai, Maharashtra</title>
+  <meta name="description" content="Arbuda Plastic — Vasai-based manufacturer and bulk wholesaler of PVC and EVA footwear since 2014. OEM-ready, fast delivery, competitive wholesale pricing." />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- ===== SECURITY: Content Security Policy ===== -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+             script-src 'self' 'unsafe-inline';
+             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+             font-src https://fonts.gstatic.com;
+             img-src 'self' https://images.unsplash.com data:;
+             connect-src 'none';
+             frame-ancestors 'none';
+             base-uri 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arbuda Plastic | PVC & EVA Footwear Manufacturer" />
+  <meta property="og:description" content="Vasai-based bulk manufacturer of PVC and EVA footwear since 2014. Wholesale & OEM." />
+  <meta property="og:url" content="https://arbudaplastic.co.in/" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2000&auto=format&fit=crop" fetchpriority="high" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Manufacturer",
+    "name": "KABP Arbuda Plastic",
+    "alternateName": "Arbuda Plastic",
+    "url": "https://arbudaplastic.co.in",
+    "logo": "https://arbudaplastic.co.in/favicon.png",
+    "description": "Vasai-based manufacturer and bulk wholesaler of PVC and EVA footwear since 2014.",
+    "foundingDate": "2014",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1st Floor, Meghdoot Signature, Gala No. 103, Plot No. 22, S. No. 72+74, Behind IPOL, Waliv Phata, Sativali",
+      "addressLocality": "Vasai East",
+      "addressRegion": "Maharashtra",
+      "postalCode": "401208",
+      "addressCountry": "IN"
+    },
+    "telephone": ["+919821351511", "+919820608337", "+917058155765"],
+    "email": "arbudaplastic123@yahoo.in",
+    "sameAs": [
+      "https://www.indiamart.com/arbudaplastic/",
+      "https://www.facebook.com/p/Arbuda-Plastic-100095175631277/"
+    ],
+    "knowsAbout": ["PVC Footwear", "EVA Footwear", "Slippers Manufacturing", "OEM Footwear", "Wholesale Footwear"]
+  }
+  </script>
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,sans-serif;background:#f4f7f9;color:#1a202c;line-height:1.65}
-    a{color:inherit;text-decoration:none}
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --navy:     #000033;
+      --crimson:  #B30000;
+      --crimson-dk: #8C0000;
+      --bg:       #F7F7F5;
+      --surface:  #FFFFFF;
+      --border:   rgba(0,0,51,.09);
+      --muted:    #64748B;
+      --text:     #1A1A2E;
+      --amber:    #D97706;
 
-    /* NAV */
-    header{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:rgba(244,247,249,.88);border-bottom:1px solid rgba(0,0,51,.08)}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(1080px,calc(100% - 40px));margin:0 auto;padding:18px 0}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo span{display:block;font-size:12px;color:#4a5568;margin-top:2px;}
-    .nav-links{display:flex;gap:20px;font-size:14px;color:#4a5568;font-weight:500;}
-    .menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(0,0,51,.12);border-radius:12px;background:#fff;color:#000033;cursor:pointer;font-size:18px}
-    .menu-toggle:focus{outline:2px solid #b30000;outline-offset:3px}
-    .scroll-top{position:fixed;right:24px;bottom:24px;z-index:1000;display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#b30000;color:#fff;font-size:16px;border:none;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,51,.18);transition:transform .2s ease,opacity .2s ease}
-    .scroll-top.show{display:flex;opacity:1;transform:translateY(0)}
-    .scroll-top:hover{transform:translateY(-2px);background:#990000}
+      --r-sm: 12px;
+      --r-md: 18px;
+      --r-lg: 24px;
+      --r-xl: 32px;
 
-    /* HERO */
-    
-    .wrap{width:min(1080px,calc(100% - 40px));margin:0 auto}
-    .tag{display:inline-block;padding:7px 16px;border-radius:999px;background:rgba(0,0,51,.08);color:#000033;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
-    h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(3rem,8vw,6rem);line-height:.93;letter-spacing:-.04em;margin-bottom:20px;color:#000033}
-    .hero-sub{font-size:18px;color:#4a5568;max-width:54ch;margin:0 auto 36px}
-    .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid rgba(0,0,51,.12);background:#fff;color:#000033;box-shadow:0 4px 16px rgba(0,0,51,.06);transition:all 0.2s}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,51,.1)}
-    .btn.fill{background:#b30000;color:#fff;border-color:transparent}
-    .btn.fill:hover{background:#990000;box-shadow:0 6px 20px rgba(179,0,0,.2)}
-
-    /* DIVIDER */
-    .divider{border:none;border-top:1px solid rgba(0,0,51,.08);margin:0}
-
-    /* ABOUT */
-    .about{padding:72px 0}
-    .section-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#b30000;margin-bottom:14px}
-    h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(2rem,4vw,3rem);color:#000033;letter-spacing:-.03em;line-height:1;margin-bottom:20px}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
-    .card{background:#ffffff;border:1px solid rgba(0,0,51,.08);border-radius:20px;padding:28px;box-shadow:0 8px 32px rgba(0,0,51,.04)}
-    .card h3{font-size:16px;font-weight:700;margin-bottom:12px;color:#000033}
-    .card p,.card li{font-size:15px;color:#4a5568;line-height:1.7}
-    .card ul{padding-left:18px;display:grid;gap:8px}
-    .card ul li::marker{color:#b30000}
-
-    /* CONTACT */
-    .contact{padding:72px 0}
-    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-    .contact-card{background:#ffffff;border:1px solid rgba(0,0,51,.08);border-radius:20px;padding:28px;box-shadow:0 8px 32px rgba(0,0,51,.04)}
-    .contact-card .label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#718096;margin-bottom:12px}
-    .contact-card p,.contact-card a{display:block;font-size:15px;font-weight:600;color:#000033;line-height:1.7}
-    .contact-card a:hover{color:#b30000}
-    .contact-card small{display:block;margin-top:12px;font-size:13px;color:#718096}
-
-    /* CTA BAND */
-    .cta{margin:72px 0 72px;background:linear-gradient(135deg,#000033,#1a2b4c);border-radius:24px;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 20px 60px rgba(0,0,51,.2)}
-    .cta h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;letter-spacing:-.02em;margin-bottom:0}
-    .cta p{color:rgba(255,255,255,.76);margin-top:8px}
-    .cta .btn{background:#fff;color:#b30000;border:none}
-    .cta .btn:hover{background:#f4f7f9}
-
-    /* FOOTER */
-    footer{border-top:1px solid rgba(0,0,51,.08);padding:22px 0}
-    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#718096}
-
-    @media(max-width:760px){
-      .about-grid,.contact-grid{grid-template-columns:1fr}
-      .cta{flex-direction:column;padding:32px 24px;text-align:center}
-      nav{position:relative;flex-direction:row;align-items:center;justify-content:space-between}
-      .menu-toggle{display:flex}
-      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#f4f7f9;padding:16px 20px;border-bottom:1px solid rgba(0,0,51,.08);box-shadow:0 8px 24px rgba(0,0,51,.08);}
-      .nav-links.open{display:flex}
-      .nav-links a{display:block;padding:12px 0;border-bottom:1px solid rgba(0,0,51,.08)}
-      .nav-links a:last-child{border-bottom:none}
-    }
-  
-    /* SCROLL HERO */
-    .hero { position: relative; padding: 140px 0 100px; text-align: center; overflow: hidden; min-height: 80vh; display: flex; align-items: center; justify-content: center; }
-    .hero-bg {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: url('https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
-      z-index: 1;
-      opacity: 1;
-      will-change: opacity;
-    }
-    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(244,247,249,0.2), rgba(244,247,249,0.8)); }
-    .hero-content {
-      position: relative; z-index: 2;
-      opacity: 0.15; /* Starts mostly transparent */
-      transform: translateY(20px);
-      will-change: opacity, transform;
-    }
-    .scroll-hint {
-      position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
-      z-index: 3; font-size: 13px; font-weight: 600; color: #000033; letter-spacing: 0.1em;
-      text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 8px;
-      opacity: 1; transition: opacity 0.3s;
-    }
-    .scroll-hint::after {
-      content: ''; width: 2px; height: 24px; background: #b30000;
-      animation: pulseDown 2s infinite;
-    }
-    @keyframes pulseDown {
-      0% { transform: scaleY(0); transform-origin: top; }
-      50% { transform: scaleY(1); transform-origin: top; }
-      51% { transform: scaleY(1); transform-origin: bottom; }
-      100% { transform: scaleY(0); transform-origin: bottom; }
+      --shadow-sm: 0 2px 8px rgba(0,0,51,.05);
+      --shadow-md: 0 8px 28px rgba(0,0,51,.08);
+      --shadow-lg: 0 20px 56px rgba(0,0,51,.13);
     }
 
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Focus ring */
+    :focus-visible {
+      outline: 2px solid var(--crimson);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    header {
+      position: sticky;
       top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(247,247,245,.92);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .25s;
+    }
+    header.scrolled { box-shadow: var(--shadow-md); }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 16px 0;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-kabp {
+      color: var(--navy);
+      font-style: italic;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: .03em;
+    }
+    .logo-name {
+      color: var(--crimson);
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .logo-sub {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 1px;
+      font-weight: 500;
+      letter-spacing: .02em;
+    }
+
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .nav-links a {
+      padding: 8px 14px;
+      border-radius: var(--r-sm);
+      color: var(--muted);
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--navy); background: rgba(0,0,51,.05); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      background: var(--crimson);
+      color: #fff !important;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background .2s, transform .2s;
+    }
+    .nav-cta:hover { background: var(--crimson-dk) !important; transform: translateY(-1px); }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
       align-items: center;
       justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      background: var(--surface);
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1;
     }
-    .modal.show {
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 82vh;
       display: flex;
-    }
-    .modal-content {
-      background: #fff;
-      padding: 48px;
-      border-radius: 24px;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      max-width: 500px;
-      box-shadow: 0 20px 60px rgba(0, 0, 51, 0.2);
-      animation: slideIn 0.3s ease;
+      padding: 120px 0 90px;
+      overflow: hidden;
     }
-    .modal-content h3 {
-      font-family: "Instrument Serif", Georgia, serif;
-      font-weight: 400;
-      font-size: 28px;
-      color: #000033;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2000&auto=format&fit=crop') center / cover no-repeat;
+      will-change: opacity;
+      z-index: 1;
     }
-    .modal-content p {
-      font-size: 16px;
-      color: #4a5568;
-      margin-bottom: 32px;
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg,
+        rgba(247,247,245,.15) 0%,
+        rgba(247,247,245,.82) 100%);
     }
-    .modal .btn {
-      background: #b30000;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      opacity: 0.12;
+      transform: translateY(22px);
+      will-change: opacity, transform;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,0,51,.07);
+      border: 1px solid rgba(0,0,51,.1);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--crimson);
+      flex-shrink: 0;
+    }
+    .hero-headline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+    .hero-kabp {
+      color: var(--navy);
+      font-style: italic;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+      letter-spacing: .03em;
+    }
+    .hero-brand {
+      color: var(--crimson);
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--muted);
+      max-width: 52ch;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-fill {
+      background: var(--crimson);
       color: #fff;
-      border: none;
+      border-color: transparent;
     }
-    .modal .btn:hover {
-      background: #990000;
+    .btn-fill:hover { background: var(--crimson-dk); box-shadow: 0 6px 20px rgba(179,0,0,.22); }
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+      border-color: transparent;
     }
-    @keyframes slideIn {
-      from {
-        transform: scale(0.95);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
+    .btn-wa:hover { background: #1da851; box-shadow: 0 6px 20px rgba(37,211,102,.25); }
+
+    /* Scroll hint */
+    .scroll-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      transition: opacity .3s;
     }
-    .product-showcase-band{
-      width:min(1080px,calc(100% - 40px));
-      margin:20px auto 0;
-      padding:28px 0 0;
+    .scroll-hint::after {
+      content: '';
+      width: 1.5px;
+      height: 28px;
+      background: var(--crimson);
+      animation: tickDown 1.8s ease-in-out infinite;
+    }
+    @keyframes tickDown {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      40%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      60%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
     }
 
-    .product-showcase-band .band-head{
-      display:flex;
-      align-items:end;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:16px;
+    /* ============================================================
+       STATS BAND  (signature trust element)
+    ============================================================ */
+    .stats-band {
+      background: var(--navy);
+      padding: 0;
+      overflow: hidden;
+    }
+    .stats-inner {
+      display: flex;
+      align-items: stretch;
+    }
+    .stat-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px;
+      border-right: 1px solid rgba(255,255,255,.08);
+      gap: 4px;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: #fff;
+      letter-spacing: -.02em;
+      line-height: 1;
+    }
+    .stat-num em {
+      font-style: normal;
+      color: var(--crimson);
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
     }
 
-    .product-showcase-band .band-head h2{
-      margin:0;
-      font-size:24px;
-      line-height:1.1;
+    /* ============================================================
+       SECTION SHARED
+    ============================================================ */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 12px;
     }
+    h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .divider { border: none; border-top: 1px solid var(--border); }
 
-    .product-showcase-band .band-head p{
-      margin:0;
-      color:#6b7280;
-      font-size:14px;
+    /* ============================================================
+       PRODUCT SHOWCASE
+    ============================================================ */
+    .products {
+      padding: 64px 0 0;
     }
+    .products .wrap { margin-bottom: 0; }
+    .band-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .band-head h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
+    .band-head p { color: var(--muted); font-size: 14px; margin: 0; }
 
-    .product-showcase-band .band-viewport{
-      overflow-x:auto;
-      overflow-y:hidden;
-      border-radius:20px;
-      background:rgba(255,255,255,.88);
-      border:1px solid rgba(0,0,51,.08);
-      box-shadow:0 14px 30px rgba(0,0,0,.06);
-      min-height:360px;
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
+    /* Marquee viewport */
+    .band-viewport {
+      overflow: hidden;
+      border-radius: var(--r-lg);
+      background: rgba(255,255,255,.9);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      position: relative;
     }
+    /* Fade edges */
+    .band-viewport::before,
+    .band-viewport::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .band-viewport::before { left: 0; background: linear-gradient(to right, rgba(255,255,255,.9), transparent); }
+    .band-viewport::after  { right: 0; background: linear-gradient(to left, rgba(255,255,255,.9), transparent); }
 
-    .product-showcase-band .band-viewport::-webkit-scrollbar {
-      height: 8px;
-    }
-    .product-showcase-band .band-viewport::-webkit-scrollbar-track {
-      background: rgba(0,0,51,.04);
-      border-radius: 4px;
-      margin: 0 20px;
-    }
-    .product-showcase-band .band-viewport::-webkit-scrollbar-thumb {
-      background: rgba(0,0,51,.15);
-      border-radius: 4px;
-    }
-    .product-showcase-band .band-viewport::-webkit-scrollbar-thumb:hover {
-      background: rgba(0,0,51,.25);
-    }
-
-    .product-showcase-band .band-track{
-      display:flex;
-      align-items:center;
-      gap:26px;
-      padding:32px 0 32px 26px;
-      width:max-content;
-      animation:scrollProducts 24s linear infinite;
+    .band-track {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 28px 24px;
+      width: max-content;
+      animation: scrollLoop 28s linear infinite;
       will-change: transform;
     }
-
-    .product-showcase-band .band-viewport:hover .band-track,
-    .product-showcase-band .band-viewport:active .band-track,
-    .product-showcase-band .band-viewport:focus-within .band-track{
-      animation-play-state:paused;
+    .band-viewport:hover .band-track { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) {
+      .band-track { animation: none !important; }
+    }
+    @keyframes scrollLoop {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
     }
 
-    .product-showcase-band .product-card{
-      flex:0 0 auto;
-      width:min(280px, calc(100vw - 80px));
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:14px;
-      padding:24px 18px;
-      border-radius:24px;
-      background:#fff;
-      border:1px solid rgba(0,0,51,.08);
-      min-height:320px;
-      text-align:center;
+    .product-card {
+      flex: 0 0 auto;
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 16px;
+      border-radius: var(--r-md);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      transition: transform .2s, box-shadow .2s;
+      text-align: center;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .product-card img {
+      width: 160px;
+      height: 160px;
+      border-radius: var(--r-sm);
+      object-fit: contain;
+      background: #fff;
+    }
+    .product-card .name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+    }
+    .products-padding-bottom { padding-bottom: 64px; }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    .about { padding: 80px 0; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .card p, .card li {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .card ul { padding-left: 18px; display: grid; gap: 6px; }
+    .card ul li::marker { color: var(--crimson); }
+
+    /* Trust badges row */
+    .trust-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
+    }
+    .trust-badge span { color: var(--crimson); font-size: 16px; }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact { padding: 80px 0; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-card .clabel {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .contact-card p, .contact-card a {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.75;
+    }
+    .contact-card a:hover { color: var(--crimson); }
+    .contact-card small {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    .product-showcase-band .product-card img{
-      width:200px;
-      height:200px;
-      border-radius:24px;
-      object-fit:contain;
-      background:#f3f4f6;
-      flex:0 0 auto;
+    /* CTA band */
+    .cta-band {
+      margin: 40px 0 80px;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a2b50 100%);
+      border-radius: var(--r-xl);
+      padding: 44px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      box-shadow: var(--shadow-lg);
     }
-
-    .product-showcase-band .product-card .name{
-      margin:0;
-      font-size:16px;
-      font-weight:700;
+    .cta-band h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: 6px;
     }
+    .cta-band p { color: rgba(255,255,255,.65); font-size: 15px; }
+    .cta-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .btn-light { background: #fff; color: var(--crimson); border: none; }
+    .btn-light:hover { background: var(--bg); }
 
-    .product-showcase-band .product-card .sub{
-      margin:0;
-      font-size:12px;
-      color:#6b7280;
+    /* ============================================================
+       FIND US
+    ============================================================ */
+    .find-us { padding: 64px 0; }
+    .find-us-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      text-align: center;
     }
-
-    @keyframes scrollProducts{
-      from{transform:translateX(0)}
-      to{transform:translateX(-50%)}
+    .find-us-inner h2 { margin: 0; }
+    .social-links { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border-radius: var(--r-md);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      text-decoration: none;
     }
+    .social-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .social-link svg { width: 22px; height: 22px; flex-shrink: 0; }
 
-    @media (max-width: 768px){
-      .product-showcase-band{
-        width:min(100%,calc(100% - 24px));
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 22px 0;
+    }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: var(--muted);
+      align-items: center;
+    }
+    .foot-legal { display: flex; gap: 16px; }
+
+    /* ============================================================
+       SCROLL-TO-TOP
+    ============================================================ */
+    .scroll-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      transition: transform .2s, opacity .2s, background .2s;
+      opacity: 0;
+    }
+    .scroll-top.show { display: flex; opacity: 1; }
+    .scroll-top:hover { transform: translateY(-2px); background: var(--crimson); }
+
+    /* ============================================================
+       MOBILE
+    ============================================================ */
+    @media (max-width: 760px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .stats-inner { flex-wrap: wrap; }
+      .stat-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.08); }
+      .cta-band { flex-direction: column; padding: 32px 24px; text-align: center; }
+      .cta-actions { justify-content: center; }
+      nav { position: relative; }
+      .menu-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: -20px;
+        right: -20px;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        padding: 8px 12px 12px;
       }
-      .product-showcase-band .product-card{
-        width:min(260px, calc(100vw - 48px));
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        display: block;
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--border);
+        border-radius: 0;
       }
-      .product-showcase-band .product-card img{
-        width:180px;
-        height:180px;
-      }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-cta { margin-top: 6px; justify-content: center; border-radius: var(--r-sm); }
+      .hero-headline { gap: 6px; }
+      .product-card { width: 190px; }
+      .product-card img { width: 140px; height: 140px; }
     }
-
-    /* FIND US */
-    .find-us{padding:72px 0}
-    .find-us-content{display:flex;flex-direction:column;align-items:center;gap:32px}
-    .find-us-content h2{margin:0}
-    .social-links{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap}
-    .social-link{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;background:#ffffff;border:1px solid rgba(0,0,51,.12);box-shadow:0 4px 16px rgba(0,0,51,.06);transition:all 0.2s;text-decoration:none}
-    .social-link:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,51,.12);border-color:rgba(0,0,51,.2)}
-    .social-link svg{width:32px;height:32px}
-    .social-link.indiamart:hover{background:#f4f4f4}
-    .social-link.facebook:hover{background:#1877f2;opacity:0.1}
-    
-    @media(max-width:640px){
-      .find-us{padding:48px 0}
-      .social-links{gap:20px}
-      .social-link{width:56px;height:56px}
-      .social-link svg{width:28px;height:28px}
-    }
-
   </style>
 </head>
 <body id="top">
 
-<header>
+<!-- ============================================================
+     NAV
+============================================================ -->
+<header id="site-header">
   <nav>
-    <a href="#top" class="logo" onclick="scrollToTop(event)">
-      <div>
-        <strong style="display: flex; align-items: center; gap: 6px;">
-          <span style="color: #000033; font-style: italic; font-weight: 900; font-size: 20px; letter-spacing: 0.02em;">KABP</span>
-          <span style="color: #b30000; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; font-weight: 700; letter-spacing: 0.02em;">ARBUDA PLASTIC</span>
-        </strong>
-        <span>PVC &amp; EVA Footwear Manufacturer</span>
+    <a href="#top" class="logo" id="logoLink">
+      <div class="logo-mark">
+        <span class="logo-kabp">KABP</span>
+        <span class="logo-name">ARBUDA PLASTIC</span>
       </div>
+      <span class="logo-sub">PVC &amp; EVA Footwear Manufacturer</span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu()">☰</button>
-    <div class="nav-links" id="mobileNav">
-      <a href="#products" onclick="showProductsModal(event)">Products</a>
-      <a href="#about">About us</a>
-      <a href="#contact">Contact us</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" id="menuToggle">☰</button>
+
+    <div class="nav-links" id="mobileNav" role="navigation" aria-label="Main navigation">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+919821351511" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.81a19.79 19.79 0 01-3-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Call Now
+      </a>
     </div>
   </nav>
 </header>
 
 <main>
 
-    <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="wrap hero-content">
-      <div class="tag">Vasai, Maharashtra · Est. 2014</div>
-      <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-        <strong style="display: flex; align-items: center; gap: 10px;">
-          <span style="color: #000033; font-style: italic; font-weight: 900; font-size: clamp(2rem, 5vw, 4rem); letter-spacing: 0.02em;">KABP</span>
-          <span style="color: #b30000; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(2.4rem, 6vw, 4.8rem); font-weight: 700; letter-spacing: 0.02em;">ARBUDA PLASTIC</span>
-        </strong>
-      </div>
-      <p class="hero-sub">Manufacturers of high-quality PVC and EVA footwear for wholesale and OEM buyers across India.</p>
-      <div class="btn-row">
-        <a class="btn fill" href="#contact">Get in touch</a>
-        <a class="btn" href="mailto:arbudaplastic123@yahoo.in">Send email</a>
-      </div>
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="wrap hero-content" id="heroContent">
+    <div class="eyebrow">Vasai, Maharashtra &middot; Est. 2014</div>
+    <div class="hero-headline">
+      <span class="hero-kabp">KABP</span>
+      <span class="hero-brand">Arbuda Plastic</span>
     </div>
-    <div class="scroll-hint">Scroll down</div>
-  </section>
-
-  <hr class="divider">
-    <!-- Product Scroll Wheel -->  
-      <section class="product-showcase-band" aria-label="Products showcase popular sellers">
-        <div class="band-head">
-          <div>
-            <h2>Products Showcase</h2>
-            <p>Popular sellers</p>
-          </div>
-        </div>
-
-        <div class="band-viewport">
-          <div class="band-track">
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Dr rani.png" alt="Dr rani">
-              <div>
-                <p class="name">Dr Rani</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Young Lady.png" alt="Young Lady">
-              <div>
-                <p class="name">Young Lady</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Tarzan.png" alt="Tarzan">
-              <div>
-                <p class="name">Tarzan</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Apple.png" alt="Apple">
-              <div>
-                <p class="name">Apple</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Storm.png" alt="Storm">
-              <div>
-                <p class="name">Storm</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Kavya.PNG" alt="Kavya">
-              <div>
-                <p class="name">Kavya</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Roma.PNG" alt="Roma sandal">
-              <div>
-                <p class="name">Roma sandal</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/School King.PNG" alt="School King">
-              <div>
-                <p class="name">School King</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/F-16.png" alt="F-16">
-              <div>
-                <p class="name">F-16</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/F-35.png" alt="F-35">
-              <div>
-                <p class="name">F-35</p>
-              </div>
-            </div>
-
-
-
-            <!-- duplicate set for seamless loop -->
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Dr rani.png" alt="Dr rani">
-              <div>
-                <p class="name">Dr Rani</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Young Lady.png" alt="Young Lady">
-              <div>
-                <p class="name">Young Lady</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Tarzan.png" alt="Tarzan">
-              <div>
-                <p class="name">Tarzan</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Apple.png" alt="Apple">
-              <div>
-                <p class="name">Apple</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Storm.png" alt="Storm">
-              <div>
-                <p class="name">Storm</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Kavya.PNG" alt="Kavya">
-              <div>
-                <p class="name">Kavya</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/Roma.PNG" alt="Roma sandal">
-              <div>
-                <p class="name">Roma Sandal</p>
-              </div>
-            </div>
-
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/School King.PNG" alt="School King">
-              <div>
-                <p class="name">School King</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/F-16.png" alt="F-16">
-              <div>
-                <p class="name">F-16</p>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <img loading="lazy" decoding="async" src="Products/F-35.png" alt="F-35">
-              <div>
-                <p class="name">F-35</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="section-label">About us</div>
-      <h2>Who we are.</h2>
-      <p style="color:#4a5568;max-width:68ch">Arbuda Plastic is a Vasai-based manufacturer and bulk wholesaler of PVC and EVA footwear. Established in 2014, we specialize in durable, comfortable and stylish footwear including men's and ladies' slippers, EVA sandals, designer chappals and school shoes.</p>
-      <div class="about-grid">
-        <div class="card">
-          <h3>What we do</h3>
-          <p>We manufacture PVC and EVA footwear with advanced production capabilities and a commitment to strict quality control. We are a trusted OEM partner and wholesale supplier for businesses across India.</p>
-        </div>
-        <div class="card">
-          <h3>Why businesses choose us</h3>
-          <ul>
-            <li>Established in 2014 with over a decade of manufacturing experience</li>
-            <li>Transparent dealing and competitive bulk pricing</li>
-            <li>Fast delivery and dependable order fulfilment</li>
-            <li>OEM-ready for private-label requirements</li>
-          </ul>
-        </div>
-      </div>
+    <p class="hero-sub">Manufacturers of high-quality PVC and EVA footwear for wholesale and OEM buyers across India.</p>
+    <div class="btn-row">
+      <a class="btn btn-fill" href="#contact">Get a quote</a>
+      <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear%20from%20Arbuda%20Plastic." target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn" href="mailto:arbudaplastic123@yahoo.in">Email us</a>
     </div>
-  </section>
+  </div>
+  <div class="scroll-hint" id="scrollHint" aria-hidden="true">Scroll</div>
+</section>
 
-  <hr class="divider">
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="section-label">Contact</div>
-      <h2>Get in touch.</h2>
-      <p style="color:#4a5568">Reach us directly for wholesale enquiries, bulk orders and business coordination.</p>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="label">Address</div>
-          <p>1st Floor, Meghdoot Signature, Gala No. 103, Plot No. 22, S. No. 72 + 74, Behind IPOL, Waliv Phata, Sativali, Vasai (E), Palghar – 401 208.</p>
-          <small>Vasai East, Palghar, Maharashtra.</small>
-        </div>
-        <div class="contact-card">
-          <div class="label">Phone</div>
-          <a href="tel:+919821351511">+91 98213 51511</a>
-          <a href="tel:+919820608337">+91 98206 08337</a>
-          <a href="tel:+917058155765">+91 70581 55765</a>
-        </div>
-        <div class="contact-card">
-          <div class="label">Email</div>
-          <a href="mailto:arbudaplastic123@yahoo.in">arbudaplastic123@yahoo.in</a>
-          <small>For catalogue, pricing or order discussions.</small>
-        </div>
-      </div>
-
-      <div class="cta">
-        <div>
-          <h3>Ready to place a bulk order?</h3>
-          <p>Call us directly or send an email and we will get back to you.</p>
-        </div>
-        <a class="btn" href="tel:+919821351511">Call now</a>
-      </div>
+<!-- ============================================================
+     STATS BAND
+============================================================ -->
+<div class="stats-band">
+  <div class="wrap stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">10<em>+</em></div>
+      <div class="stat-label">Years operating</div>
     </div>
-  </section>
-
-  <!-- FIND US AT -->
-  <section class="find-us">
-    <div class="wrap find-us-content">
-      <h2>Find us at</h2>
-      <div class="social-links">
-        <a href="https://www.indiamart.com/arbudaplastic/" target="_blank" rel="noopener noreferrer" class="social-link indiamart" aria-label="Arbuda Plastic on IndiaMART">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="18" height="18" rx="2" fill="#FF6B35" stroke="#FF6B35" stroke-width="0.5"/>
-            <text x="12" y="17" font-size="12" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">IM</text>
-          </svg>
-        </a>
-        <a href="https://www.facebook.com/p/Arbuda-Plastic-100095175631277/" target="_blank" rel="noopener noreferrer" class="social-link facebook" aria-label="Arbuda Plastic on Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/>
-          </svg>
-        </a>
-      </div>
+    <div class="stat-item">
+      <div class="stat-num">PVC <em>&amp;</em> EVA</div>
+      <div class="stat-label">Material expertise</div>
     </div>
-  </section>
-
-</main>
-
-<!-- PRODUCTS MODAL -->
-<div id="productsModal" class="modal">
-  <div class="modal-content">
-    <h3>Products Brochure</h3>
-    <p>Our full products brochure is coming soon. Please reach out directly for current offerings and specifications.</p>
-    <button class="btn fill" onclick="closeProductsModal()">Got it</button>
+    <div class="stat-item">
+      <div class="stat-num">OEM<em>.</em></div>
+      <div class="stat-label">Private label ready</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">Bulk<em>.</em></div>
+      <div class="stat-label">Wholesale pricing</div>
+    </div>
   </div>
 </div>
 
+<!-- ============================================================
+     PRODUCT SHOWCASE
+============================================================ -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="band-head">
+      <div>
+        <div class="section-label">Product Range</div>
+        <h2>Products Showcase</h2>
+        <p>Popular sellers — hover to pause</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:min(1080px,calc(100% - 40px));margin:0 auto">
+    <div class="band-viewport" role="region" aria-label="Scrolling product showcase">
+      <div class="band-track" id="bandTrack">
+
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Dr rani.png" alt="Dr Rani PVC slipper by Arbuda Plastic" />
+          <p class="name">Dr Rani</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Young Lady.png" alt="Young Lady ladies slipper" />
+          <p class="name">Young Lady</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Tarzan.png" alt="Tarzan men's slipper" />
+          <p class="name">Tarzan</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Apple.png" alt="Apple chappal" />
+          <p class="name">Apple</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Storm.png" alt="Storm EVA sandal" />
+          <p class="name">Storm</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Kavya.PNG" alt="Kavya ladies sandal" />
+          <p class="name">Kavya</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/Roma.PNG" alt="Roma sandal" />
+          <p class="name">Roma Sandal</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/School King.PNG" alt="School King school shoe" />
+          <p class="name">School King</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/F-16.png" alt="F-16 model footwear" />
+          <p class="name">F-16</p>
+        </div>
+        <div class="product-card">
+          <img loading="lazy" decoding="async" src="Products/F-35.png" alt="F-35 model footwear" />
+          <p class="name">F-35</p>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Dr rani.png" alt="" /><p class="name">Dr Rani</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Young Lady.png" alt="" /><p class="name">Young Lady</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Tarzan.png" alt="" /><p class="name">Tarzan</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Apple.png" alt="" /><p class="name">Apple</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Storm.png" alt="" /><p class="name">Storm</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Kavya.PNG" alt="" /><p class="name">Kavya</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/Roma.PNG" alt="" /><p class="name">Roma Sandal</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/School King.PNG" alt="" /><p class="name">School King</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/F-16.png" alt="" /><p class="name">F-16</p></div>
+        <div class="product-card" aria-hidden="true"><img loading="lazy" decoding="async" src="Products/F-35.png" alt="" /><p class="name">F-35</p></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="products-padding-bottom"></div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-label">About us</div>
+    <h2>Who we are.</h2>
+    <p style="color:var(--muted);max-width:68ch;font-size:15px">Arbuda Plastic is a Vasai-based manufacturer and bulk wholesaler of PVC and EVA footwear. Established in 2014, we specialise in durable, comfortable and stylish footwear — men's and ladies' slippers, EVA sandals, designer chappals and school shoes.</p>
+
+    <div class="trust-row">
+      <div class="trust-badge"><span>✓</span> 10+ Years Manufacturing</div>
+      <div class="trust-badge"><span>✓</span> OEM &amp; Private Label</div>
+      <div class="trust-badge"><span>✓</span> Bulk Wholesale Pricing</div>
+      <div class="trust-badge"><span>✓</span> PAN India Delivery</div>
+    </div>
+
+    <div class="about-grid">
+      <div class="card">
+        <h3>What we make</h3>
+        <p>Advanced PVC and EVA footwear manufactured in our Vasai East facility with strict quality control at every stage. Trusted by wholesale buyers and OEM brands across India.</p>
+      </div>
+      <div class="card">
+        <h3>Why businesses choose us</h3>
+        <ul>
+          <li>Over a decade of manufacturing experience since 2014</li>
+          <li>Transparent dealing and competitive bulk pricing</li>
+          <li>Fast, reliable order fulfilment and delivery</li>
+          <li>OEM-ready for private-label requirements</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-label">Contact</div>
+    <h2>Get in touch.</h2>
+    <p style="color:var(--muted);font-size:15px">Reach us directly for wholesale enquiries, bulk orders and business coordination.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="clabel">Address</div>
+        <p>1st Floor, Meghdoot Signature, Gala No. 103, Plot No. 22, S. No. 72 + 74, Behind IPOL, Waliv Phata, Sativali, Vasai (E), Palghar – 401 208.</p>
+        <small>Vasai East, Palghar, Maharashtra</small>
+      </div>
+      <div class="contact-card">
+        <div class="clabel">Phone</div>
+        <a href="tel:+919821351511">+91 98213 51511</a>
+        <a href="tel:+919820608337">+91 98206 08337</a>
+        <a href="tel:+917058155765">+91 70581 55765</a>
+        <small>Mon – Sat, 8 AM – 8 PM</small>
+      </div>
+      <div class="contact-card">
+        <div class="clabel">Email</div>
+        <a href="mailto:arbudaplastic123@yahoo.in">arbudaplastic123@yahoo.in</a>
+        <small>For catalogue, pricing or order discussions</small>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <div>
+        <h3>Ready to place a bulk order?</h3>
+        <p>Call us or message on WhatsApp — we respond fast.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-light" href="tel:+919821351511">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.81a19.79 19.79 0 01-3-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call now
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear." target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FIND US
+============================================================ -->
+<section class="find-us">
+  <div class="wrap find-us-inner">
+    <div class="section-label">Online presence</div>
+    <h2>Find us at</h2>
+    <div class="social-links">
+      <a href="https://www.indiamart.com/arbudaplastic/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on IndiaMART">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="#FF6B35"/>
+          <text x="12" y="16.5" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">IM</text>
+        </svg>
+        IndiaMART
+      </a>
+      <a href="https://www.facebook.com/p/Arbuda-Plastic-100095175631277/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/>
+        </svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
 <footer>
   <div class="wrap foot">
-    <span> KABP™ Arbuda Plastic </span>
-    <span>Vasai, Maharashtra · PVC &amp; EVA Footwear</span>
+    <span>KABP™ Arbuda Plastic &mdash; Vasai, Maharashtra</span>
+    <div class="foot-legal">
+      <span>PVC &amp; EVA Footwear Manufacturer</span>
+      <span>&copy; <span id="footYear"></span></span>
+    </div>
   </div>
 </footer>
 
-<button class="scroll-top" type="button" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+<button class="scroll-top" type="button" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
+<!-- ============================================================
+     SCRIPTS  (no inline onclick – all via addEventListener)
+============================================================ -->
 <script>
-  function showProductsModal(e) {
+(function () {
+  'use strict';
+
+  /* ── Footer year ── */
+  var yearEl = document.getElementById('footYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ── Logo / scroll-to-top ── */
+  document.getElementById('logoLink').addEventListener('click', function (e) {
     e.preventDefault();
-    document.getElementById('productsModal').classList.add('show');
-  }
-
-  function closeProductsModal() {
-    document.getElementById('productsModal').classList.remove('show');
-  }
-
-  function scrollToTop(e) {
-    if (e) e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  });
 
-  function toggleMobileMenu() {
-    const nav = document.getElementById('mobileNav');
-    const button = document.querySelector('.menu-toggle');
-    const isOpen = nav.classList.toggle('open');
-    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  }
+  var scrollBtn = document.getElementById('scrollTopBtn');
+  scrollBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-  window.addEventListener('click', (e) => {
-    const modal = document.getElementById('productsModal');
-    if (e.target === modal) {
-      modal.classList.remove('show');
+  /* ── Mobile menu ── */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileNav  = document.getElementById('mobileNav');
+
+  menuToggle.addEventListener('click', function () {
+    var isOpen = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  /* Close mobile menu when a link is clicked */
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
+
+  /* Close mobile menu on outside click */
+  document.addEventListener('click', function (e) {
+    if (!mobileNav.contains(e.target) && e.target !== menuToggle) {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
     }
   });
 
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const fadeDistance = 400; // pixels over which the fade happens
-    let progress = Math.min(scrollY / fadeDistance, 1);
+  /* ── Scroll-driven hero parallax & UI updates ── */
+  var heroBg      = document.getElementById('heroBg');
+  var heroContent = document.getElementById('heroContent');
+  var scrollHint  = document.getElementById('scrollHint');
+  var siteHeader  = document.getElementById('site-header');
+  var fadeDistance = 380;
 
-    const bg = document.querySelector('.hero-bg');
-    const content = document.querySelector('.hero-content');
-    const hint = document.querySelector('.scroll-hint');
-    const topButton = document.querySelector('.scroll-top');
+  function onScroll() {
+    var scrollY   = window.scrollY;
+    var progress  = Math.min(scrollY / fadeDistance, 1);
 
-    if (bg) bg.style.opacity = 1 - (progress * 1); // fades out
-    if (content) {
-      content.style.opacity = 0.15 + (progress * 0.85); // fades in to 1
-      content.style.transform = `translateY(${20 - (progress * 20)}px)`; // slides up
+    /* Hero fade */
+    if (heroBg)      heroBg.style.opacity      = String(1 - progress);
+    if (heroContent) {
+      heroContent.style.opacity   = String(0.12 + progress * 0.88);
+      heroContent.style.transform = 'translateY(' + (22 - progress * 22) + 'px)';
     }
-    if (hint) {
-      hint.style.opacity = 1 - (progress * 2); // fades out twice as fast
-    }
-    if (topButton) {
-      topButton.classList.toggle('show', scrollY > 300);
+    if (scrollHint)  scrollHint.style.opacity  = String(Math.max(0, 1 - progress * 2.5));
+
+    /* Scroll-to-top button */
+    scrollBtn.classList.toggle('show', scrollY > 320);
+
+    /* Sticky header shadow */
+    siteHeader.classList.toggle('scrolled', scrollY > 10);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); /* set initial state */
+
+  /* ── Escape key closes any open UI ── */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
     }
   });
-  // Trigger once to set initial state correctly if reloaded partway down
-  window.dispatchEvent(new Event('scroll'));
+
+}());
 </script>
 </body>
-
 </html>
