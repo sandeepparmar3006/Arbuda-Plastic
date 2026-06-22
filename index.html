@@ -10,14 +10,7 @@
 
   <!-- ===== SECURITY: Content Security Policy ===== -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self';
-             script-src 'self' 'unsafe-inline';
-             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-             font-src https://fonts.gstatic.com;
-             img-src 'self' https://images.unsplash.com data:;
-             connect-src 'none';
-             frame-ancestors 'none';
-             base-uri 'self';" />
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="X-Frame-Options" content="DENY" />
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
@@ -406,7 +399,8 @@
     .btn-light:hover { background: rgba(247,247,245,0.2); }
 
     @media (max-width: 600px) {
-      #scroll-video-hero { height: 250vh; }
+      #scroll-video-hero { height: 300vh; }
+      .svh-sticky { height: 100svh; height: 100dvh; }
     }
     @media (prefers-reduced-motion: reduce) {
       .svh-video { display: none; }
@@ -842,8 +836,10 @@
       id="svhVideo"
       src="hero.mp4"
       muted
+      autoplay
       playsinline
-      preload="auto"
+      webkit-playsinline
+      preload="metadata"
       poster="assets/hero-poster.jpg"
       aria-hidden="true"
     ></video>
@@ -857,16 +853,18 @@
       <h1 class="svh-headline">
         <em>KABP</em> Arbuda Plastic
       </h1>
-    </div>
-
-    <!-- CTA Buttons -->
-    <div class="svh-btn-row">
-      <a class="btn btn-fill" href="#contact">Get a quote</a>
-      <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear%20from%20Arbuda%20Plastic." target="_blank" rel="noopener noreferrer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
-      </a>
-      <a class="btn" style="background:rgba(247,247,245,.1);color:#F7F7F5;border-color:rgba(247,247,245,.2)" href="mailto:arbudaplastic123@yahoo.in">Email us</a>
+      <p class="svh-sub">
+        Manufacturers of high-quality PVC and EVA footwear<br />
+        for wholesale and OEM buyers across India.
+      </p>
+      <div class="svh-btn-row">
+        <a class="btn btn-fill" href="#contact">Get a quote</a>
+        <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear%20from%20Arbuda%20Plastic." target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a class="btn" style="background:rgba(247,247,245,.1);color:#F7F7F5;border-color:rgba(247,247,245,.2)" href="mailto:arbudaplastic123@yahoo.in">Email us</a>
+      </div>
     </div>
 
     <!-- Progress bar -->
@@ -1477,7 +1475,7 @@
 
   if (!section || !video) return;
 
-  /* ── Reveal headline on entry ── */
+  /* ── Reveal headline when hero enters viewport ── */
   var revealObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
@@ -1488,44 +1486,108 @@
   }, { threshold: 0.1 });
   revealObs.observe(section);
 
-  /* ── Video duration ── */
+  /* ────────────────────────────────────────────────────────────
+     VIDEO READINESS
+     iOS Safari will not allow seeks until the video has been
+     "unlocked" by a play() call (even muted). We call play()
+     then immediately pause() to unlock seeking, then set up
+     the scrub listener. We gate everything behind canplaythrough
+     so we never seek before data is available.
+  ──────────────────────────────────────────────────────────── */
+  var videoReady = false;
   var videoDuration = 0;
-  function onMeta() { videoDuration = video.duration || 0; }
-  video.addEventListener('loadedmetadata', onMeta, { passive: true, once: true });
-  if (video.readyState >= 1) onMeta();
+  var pendingSeek = null; /* store the target time if scrub fires before ready */
+
+  function unlockAndPrepare() {
+    if (videoReady) return;
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(function () {
+        video.pause();
+        video.currentTime = 0;
+        videoReady = true;
+        videoDuration = video.duration || 0;
+        /* If a scrub already queued a seek, apply it now */
+        if (pendingSeek !== null) {
+          video.currentTime = pendingSeek;
+          pendingSeek = null;
+        }
+      }).catch(function () {
+        /* play() blocked (e.g. data-saving mode) — still mark ready
+           so we attempt seeks; they may silently no-op on low-end devices */
+        videoReady = true;
+        videoDuration = video.duration || 0;
+      });
+    } else {
+      /* Old browser without promise return */
+      video.pause();
+      videoReady = true;
+      videoDuration = video.duration || 0;
+    }
+  }
+
+  /* Try to unlock on metadata load, or immediately if already loaded */
+  function onMeta() {
+    videoDuration = video.duration || 0;
+    unlockAndPrepare();
+  }
+
+  if (video.readyState >= 1) {
+    onMeta();
+  } else {
+    video.addEventListener('loadedmetadata', onMeta, { passive: true, once: true });
+  }
+
+  /* Also try once canplaythrough fires, as a fallback */
+  video.addEventListener('canplaythrough', function () {
+    if (!videoReady) unlockAndPrepare();
+  }, { passive: true, once: true });
 
   /* ── Core scrub ── */
   var ticking = false;
 
   function scrub() {
     ticking = false;
-    var rect      = section.getBoundingClientRect();
-    var sectionH  = section.offsetHeight;
-    var viewH     = window.innerHeight;
-    var scrolled  = -rect.top;
+
+    var rect       = section.getBoundingClientRect();
+    var sectionH   = section.offsetHeight;
+    var viewH      = window.innerHeight;
+    var scrolled   = -rect.top;
     var scrollable = sectionH - viewH;
     var pct = Math.max(0, Math.min(1, scrolled / scrollable));
 
+    /* Progress bar */
     if (progress) progress.style.width = (pct * 100).toFixed(2) + '%';
 
+    /* Scroll cue */
     if (scrollCue) {
       if (pct > 0.08) scrollCue.classList.add('hidden');
-      else scrollCue.classList.remove('hidden');
+      else            scrollCue.classList.remove('hidden');
     }
 
+    /* Seek video */
     if (videoDuration > 0) {
       var target = pct * videoDuration;
-      if (Math.abs(video.currentTime - target) > 0.016) {
-        video.currentTime = target;
+      var delta  = Math.abs(video.currentTime - target);
+      if (delta > 0.02) {           /* threshold: ~0.5 frames at 24 fps */
+        if (videoReady) {
+          video.currentTime = target;
+        } else {
+          pendingSeek = target;     /* queue for when unlock completes */
+        }
       }
     }
   }
 
   function onScroll() {
-    if (!ticking) { requestAnimationFrame(scrub); ticking = true; }
+    if (!ticking) {
+      requestAnimationFrame(scrub);
+      ticking = true;
+    }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
+  /* Run once immediately to set initial state */
   scrub();
 
 })();
