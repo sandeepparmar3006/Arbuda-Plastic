@@ -233,6 +233,7 @@
       align-items: center;
       justify-content: flex-start;
       padding-top: clamp(18px, 6vh, 56px);
+      background: var(--navy);
     }
     .svh-video {
       position: absolute;
@@ -278,6 +279,7 @@
       font-size: clamp(2.2rem, 6vw, 4.5rem);
       line-height: 1.06;
       color: #F7F7F5;
+      text-wrap: balance;
       opacity: 0;
       transform: translateY(18px);
       transition: opacity 0.7s ease 0.12s, transform 0.7s ease 0.12s;
@@ -326,10 +328,12 @@
       bottom: 0;
       left: 0;
       height: 3px;
-      width: 0%;
+      width: 100%;
       background: var(--crimson);
       z-index: 3;
-      transition: width 0.05s linear;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.05s linear;
     }
 
     /* shared btn styles (keep for rest of page) */
@@ -362,13 +366,6 @@
       border-color: transparent;
     }
     .btn-wa:hover { background: #1da851; box-shadow: 0 6px 20px rgba(37,211,102,.25); }
-    /* btn-light variant for contact CTA band */
-    .btn-light {
-      background: rgba(247,247,245,0.12);
-      color: #F7F7F5;
-      border-color: rgba(247,247,245,0.2);
-    }
-    .btn-light:hover { background: rgba(247,247,245,0.2); }
 
     @media (max-width: 600px) {
       #scroll-video-hero { height: 300vh; }
@@ -414,6 +411,15 @@
       font-style: normal;
       color: var(--crimson);
     }
+    .stat-flag {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #fff;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
     .stat-label {
       font-size: 11px;
       font-weight: 600;
@@ -441,6 +447,7 @@
       letter-spacing: -.03em;
       line-height: 1.05;
       margin-bottom: 18px;
+      text-wrap: balance;
     }
     .divider { border: none; border-top: 1px solid var(--border); }
 
@@ -762,9 +769,39 @@
       .product-card { width: 190px; }
       .product-card img { width: 140px; height: 140px; }
     }
+
+    /* ============================================================
+       ACCESSIBILITY
+    ============================================================ */
+    .skip-nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 0 0 var(--r-sm) 0;
+      transform: translateY(-100%);
+      transition: transform 0.2s;
+      text-decoration: none;
+    }
+    .skip-nav:focus { transform: translateY(0); }
+
+    /* Hamburger / close icon toggle via aria-expanded — no JS textContent needed */
+    .icon-close { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+    /* Marquee pauses when a keyboard user tabs into a product card */
+    .band-viewport:focus-within .band-track { animation-play-state: paused; }
   </style>
 </head>
 <body id="top">
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <!-- ============================================================
      NAV
@@ -779,7 +816,17 @@
       <span class="logo-sub">PVC &amp; EVA Footwear Manufacturer</span>
     </a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" id="menuToggle">☰</button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" id="menuToggle" aria-label="Toggle navigation menu">
+      <svg class="icon-menu" width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+        <rect y="0" width="18" height="2" rx="1" fill="currentColor"/>
+        <rect y="6" width="18" height="2" rx="1" fill="currentColor"/>
+        <rect y="12" width="18" height="2" rx="1" fill="currentColor"/>
+      </svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
 
     <div class="nav-links" id="mobileNav" role="navigation" aria-label="Main navigation">
       <a href="#products">Products</a>
@@ -795,12 +842,12 @@
   </nav>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- ============================================================
      SCROLL-VIDEO HERO
 ============================================================ -->
-<section id="scroll-video-hero" aria-label="Hero — manufacturing excellence in motion">
+<section id="scroll-video-hero" aria-label="Hero: manufacturing excellence in motion">
   <div class="svh-sticky">
 
     <!-- VIDEO — replace src with your actual .mp4 path -->
@@ -812,8 +859,7 @@
       autoplay
       playsinline
       webkit-playsinline
-      preload="metadata"
-      poster="assets/hero-poster.jpg"
+      preload="auto"
       aria-hidden="true"
     ></video>
 
@@ -831,7 +877,7 @@
     <!-- CTAs — sibling of svh-content so the ~ selector applies correctly -->
     <div class="svh-btn-row">
       <a class="btn btn-fill" href="#contact">Get a quote</a>
-      <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear%20from%20Arbuda%20Plastic." target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear%20from%20Arbuda%20Plastic." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us (opens in new tab)">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
       </a>
@@ -854,16 +900,16 @@
       <div class="stat-label">Years operating</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">PVC <em>&amp;</em> EVA</div>
-      <div class="stat-label">Material expertise</div>
+      <div class="stat-num">40<em>+</em></div>
+      <div class="stat-label">Product styles</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">OEM<em>.</em></div>
-      <div class="stat-label">Private label ready</div>
+      <div class="stat-flag">OEM Ready</div>
+      <div class="stat-label">Private label available</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">Bulk<em>.</em></div>
-      <div class="stat-label">Wholesale pricing</div>
+      <div class="stat-flag">Pan India</div>
+      <div class="stat-label">Wholesale delivery</div>
     </div>
   </div>
 </div>
@@ -1229,15 +1275,14 @@
 ============================================================ -->
 <section class="about" id="about">
   <div class="wrap">
-    <div class="section-label">About us</div>
     <h2>Who we are.</h2>
-    <p style="color:var(--muted);max-width:68ch;font-size:15px">Arbuda Plastic is a Vasai-based manufacturer and bulk wholesaler of PVC and EVA footwear. Established in 2014, we specialise in durable, comfortable and stylish footwear — men's and ladies' slippers, EVA sandals, designer chappals and school shoes.</p>
+    <p style="color:var(--muted);max-width:68ch;font-size:15px">Arbuda Plastic manufactures PVC and EVA footwear from our Vasai East facility. Over a decade supplying wholesale buyers and OEM brands across India.</p>
 
     <div class="trust-row">
-      <div class="trust-badge"><span>✓</span> 10+ Years Manufacturing</div>
-      <div class="trust-badge"><span>✓</span> OEM &amp; Private Label</div>
-      <div class="trust-badge"><span>✓</span> Bulk Wholesale Pricing</div>
-      <div class="trust-badge"><span>✓</span> PAN India Delivery</div>
+      <div class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><polyline points="2,7 6,11 12,3" stroke="var(--crimson)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 10+ Years Manufacturing</div>
+      <div class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><polyline points="2,7 6,11 12,3" stroke="var(--crimson)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> OEM &amp; Private Label</div>
+      <div class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><polyline points="2,7 6,11 12,3" stroke="var(--crimson)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bulk Wholesale Pricing</div>
+      <div class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><polyline points="2,7 6,11 12,3" stroke="var(--crimson)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> PAN India Delivery</div>
     </div>
 
     <div class="about-grid">
@@ -1271,7 +1316,7 @@
     <div class="contact-grid">
       <div class="contact-card">
         <div class="clabel">Address</div>
-        <p>1st Floor, Meghdoot Signature, Gala No. 103, Plot No. 22, S. No. 72 + 74, Behind IPOL, Waliv Phata, Sativali, Vasai (E), Palghar – 401 208.</p>
+        <p>1st Floor, Meghdoot Signature, Gala No. 103, Plot No. 22, S. No. 72 + 74, Behind IPOL, Waliv Phata, Sativali, Vasai (E), Palghar - 401208.</p>
         <small>Vasai East, Palghar, Maharashtra</small>
       </div>
       <div class="contact-card">
@@ -1279,7 +1324,7 @@
         <a href="tel:+919821351511">+91 98213 51511</a>
         <a href="tel:+919820608337">+91 98206 08337</a>
         <a href="tel:+917058155765">+91 70581 55765</a>
-        <small>Mon – Sat, 8 AM – 8 PM</small>
+        <small>Mon-Sat, 8 AM-8 PM</small>
       </div>
       <div class="contact-card">
         <div class="clabel">Email</div>
@@ -1298,7 +1343,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.81a19.79 19.79 0 01-3-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Call now
         </a>
-        <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear." target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-wa" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20footwear." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us (opens in new tab)">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
         </a>
@@ -1314,14 +1359,14 @@
   <div class="wrap find-us-inner">
     <h2>Find Us Online</h2>
     <div class="social-links">
-      <a href="https://www.indiamart.com/arbudaplastic/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on IndiaMART">
+      <a href="https://www.indiamart.com/arbudaplastic/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on IndiaMART (opens in new tab)">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="2" y="2" width="20" height="20" rx="3" fill="#FF6B35"/>
           <text x="12" y="16.5" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">IM</text>
         </svg>
         IndiaMART
       </a>
-      <a href="https://www.facebook.com/p/Arbuda-Plastic-100095175631277/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on Facebook">
+      <a href="https://www.facebook.com/p/Arbuda-Plastic-100095175631277/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on Facebook (opens in new tab)">
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/>
         </svg>
@@ -1377,7 +1422,6 @@
   menuToggle.addEventListener('click', function () {
     var isOpen = mobileNav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    menuToggle.textContent = isOpen ? '✕' : '☰';
   });
 
   /* Close mobile menu when a link is clicked */
@@ -1385,7 +1429,6 @@
     link.addEventListener('click', function () {
       mobileNav.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.textContent = '☰';
     });
   });
 
@@ -1394,7 +1437,6 @@
     if (!mobileNav.contains(e.target) && e.target !== menuToggle) {
       mobileNav.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.textContent = '☰';
     }
   });
 
@@ -1414,7 +1456,6 @@
     if (e.key === 'Escape') {
       mobileNav.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.textContent = '☰';
     }
   });
 
@@ -1518,8 +1559,8 @@
     var scrollable = sectionH - viewH;
     var pct = Math.max(0, Math.min(1, scrolled / scrollable));
 
-    /* Progress bar */
-    if (progress) progress.style.width = (pct * 100).toFixed(2) + '%';
+    /* Progress bar — scaleX avoids layout recalculation */
+    if (progress) progress.style.transform = 'scaleX(' + pct.toFixed(4) + ')';
 
     /* Seek video */
     if (videoDuration > 0) {
