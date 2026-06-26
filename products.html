@@ -155,12 +155,11 @@
     .modal-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 12px; line-height: 1.6; }
 
     /* footer */
-    .site-footer { border-top: 1px solid var(--border); padding: 28px 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    .footer-copy { font-size: 13px; color: var(--muted); }
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a { font-size: 13px; color: var(--muted); transition: color .18s; }
-    .footer-links a:hover { color: var(--navy); }
+    footer { border-top: 1px solid var(--border); padding: 22px 0; }
+    .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); align-items: center; }
+    .foot-legal { display: flex; gap: 16px; align-items: center; }
+    .foot-legal a { color: var(--muted); transition: color .18s; }
+    .foot-legal a:hover { color: var(--navy); }
 
     /* responsive */
     @media (max-width: 960px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -310,15 +309,13 @@
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span class="footer-copy">© 2025 KABP Arbuda Plastic, Vasai East, Maharashtra</span>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:arbudaplastic123@yahoo.in">Email</a>
-    </nav>
+<footer>
+  <div class="wrap foot">
+    <span>KABP&trade; Arbuda Plastic &middot; Vasai, Maharashtra</span>
+    <div class="foot-legal">
+      <span>PVC &amp; EVA Footwear Manufacturer</span>
+      <span>&copy; <span id="footYear"></span></span>
+    </div>
   </div>
 </footer>
 
@@ -329,6 +326,9 @@
 <script>
 (function () {
   'use strict';
+
+  var yearEl = document.getElementById('footYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   function encodePath(raw) {
     if (raw.startsWith('http')) return raw;
