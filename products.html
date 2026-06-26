@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Arbuda Plastic – PVC &amp; EVA Footwear Manufacturer</title>
+  <meta name="description" content="Browse Arbuda Plastic's full range of PVC and EVA footwear — 39 styles available in multiple sizes. Wholesale and OEM enquiries welcome from Vasai, Maharashtra." />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://oymycpqxjbrsgbeybrcn.supabase.co data:; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Products | Arbuda Plastic" />
+  <meta property="og:description" content="39 styles in PVC and EVA footwear. Wholesale and OEM enquiries from Vasai, Maharashtra." />
+  <meta property="og:url" content="https://arbudaplastic.co.in/products.html" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:       #000033;
+      --crimson:    #B30000;
+      --crimson-dk: #8C0000;
+      --bg:         #F7F7F5;
+      --surface:    #FFFFFF;
+      --border:     rgba(0,0,51,.09);
+      --muted:      #64748B;
+      --text:       #1A1A2E;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-mono:    'Space Mono', ui-monospace, monospace;
+      --r-sm: 12px; --r-md: 18px; --r-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(0,0,51,.05);
+      --shadow-md: 0 8px 28px rgba(0,0,51,.08);
+      --shadow-lg: 0 24px 64px rgba(0,0,51,.14);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+    :focus-visible { outline: 2px solid var(--crimson); outline-offset: 3px; border-radius: 4px; }
+
+    /* skip link */
+    .skip-nav { position: absolute; left: -9999px; top: 8px; background: var(--crimson); color: #fff; padding: 8px 16px; border-radius: var(--r-sm); font-weight: 600; font-size: 14px; z-index: 9999; }
+    .skip-nav:focus { left: 8px; }
+
+    /* nav */
+    header { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(247,247,245,.92); border-bottom: 1px solid var(--border); transition: box-shadow .25s; }
+    header.scrolled { box-shadow: var(--shadow-md); }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 16px 0; }
+    .logo { display: flex; flex-direction: column; }
+    .logo-mark { display: flex; align-items: center; gap: 6px; }
+    .logo-kabp { color: var(--navy); font-style: italic; font-weight: 900; font-size: 18px; letter-spacing: .03em; }
+    .logo-name { color: var(--crimson); font-size: 21px; font-weight: 700; letter-spacing: .04em; }
+    .logo-sub { display: block; font-size: 11px; color: var(--muted); margin-top: 1px; font-weight: 500; letter-spacing: .02em; }
+    .nav-links { display: flex; gap: 4px; font-size: 14px; font-weight: 500; }
+    .nav-links a { padding: 8px 14px; border-radius: var(--r-sm); color: var(--muted); transition: color .2s, background .2s; }
+    .nav-links a:hover { color: var(--navy); background: rgba(0,0,51,.05); }
+    .nav-links a[aria-current="page"] { color: var(--navy); font-weight: 600; background: rgba(0,0,51,.05); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; background: var(--crimson); color: #fff !important; border-radius: 999px; font-weight: 600; font-size: 14px; transition: background .2s, transform .2s; }
+    .nav-cta:hover { background: var(--crimson-dk) !important; transform: translateY(-1px); }
+    .menu-toggle { display: none; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--navy); }
+    .icon-close { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+    /* layout */
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+
+    /* page header */
+    .page-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); }
+    .page-header h1 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); color: var(--navy); line-height: 1.15; margin-bottom: 8px; }
+    .page-header p { font-size: 15px; color: var(--muted); }
+
+    /* filter bar */
+    .filter-bar { display: flex; align-items: center; gap: 8px; padding: 24px 0 20px; flex-wrap: wrap; }
+    .filter-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-right: 4px; }
+    .filter-btn { padding: 7px 18px; min-height: 36px; border-radius: 999px; border: 1.5px solid var(--border); background: var(--surface); color: var(--muted); font-size: 13px; font-weight: 500; transition: border-color .18s, background .18s, color .18s; }
+    .filter-btn:hover { border-color: rgba(0,0,51,.3); color: var(--navy); }
+    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .filter-divider { width: 1px; height: 20px; background: var(--border); align-self: center; flex-shrink: 0; }
+
+    /* grid */
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-bottom: 80px; }
+    .product-card { background: var(--surface); border-radius: var(--r-md); border: 1px solid var(--border); overflow: hidden; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+    .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .product-card:focus-visible { outline: 2px solid var(--crimson); outline-offset: 2px; }
+    .card-thumb { aspect-ratio: 1 / 1; overflow: hidden; background: #efecea; }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .product-card:hover .card-thumb img { transform: scale(1.05); }
+    .card-body { padding: 14px 16px 16px; }
+    .card-name { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+    .card-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .badge { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; line-height: 1; }
+    .badge-eva { background: var(--crimson); color: #fff; }
+    .badge-pvc { background: var(--navy); color: #fff; }
+    .card-sizes { font-size: 11px; color: var(--muted); font-weight: 500; }
+    .empty-state { display: none; grid-column: 1 / -1; text-align: center; padding: 64px 20px; color: var(--muted); font-size: 15px; }
+    .empty-state.visible { display: block; }
+
+    /* modal backdrop */
+    .modal-backdrop { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,20,.65); display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity .22s; }
+    .modal-backdrop.open { opacity: 1; pointer-events: all; }
+
+    /* modal panel */
+    .modal-panel { background: var(--surface); border-radius: var(--r-lg); width: 100%; max-width: 900px; height: min(640px, 88vh); overflow: hidden; display: grid; grid-template-columns: 1fr 320px; box-shadow: var(--shadow-lg); transform: translateY(14px) scale(.98); transition: transform .22s; }
+    .modal-backdrop.open .modal-panel { transform: none; }
+
+    /* gallery */
+    .modal-gallery { display: flex; flex-direction: column; background: #efecea; min-height: 0; overflow: hidden; }
+    .gallery-main { flex: 1; position: relative; overflow: hidden; min-height: 0; display: flex; align-items: center; justify-content: center; background: #efecea; }
+    .gallery-main img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+    .gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 10px; pointer-events: none; }
+    .gallery-arrow { pointer-events: all; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); color: #fff; display: flex; align-items: center; justify-content: center; transition: background .15s; backdrop-filter: blur(4px); }
+    .gallery-arrow:hover { background: rgba(255,255,255,.28); }
+    .gallery-arrow:disabled { opacity: .2; cursor: default; pointer-events: none; }
+    .gallery-thumbs { display: flex; gap: 6px; padding: 8px 12px; overflow-x: auto; border-top: 1px solid var(--border); background: var(--surface); flex-shrink: 0; scrollbar-width: thin; scrollbar-color: var(--border) transparent; min-height: 68px; align-items: center; }
+    .gallery-thumbs::-webkit-scrollbar { height: 4px; }
+    .gallery-thumbs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .gallery-thumb { flex-shrink: 0; width: 52px; height: 52px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; background: #efecea; transition: border-color .15s; }
+    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-thumb.active { border-color: var(--crimson); }
+    .gallery-thumb:focus-visible { outline: 2px solid var(--crimson); outline-offset: 2px; }
+
+    /* modal info */
+    .modal-info { display: flex; flex-direction: column; padding: 24px; overflow-y: auto; border-left: 1px solid var(--border); }
+    .modal-close-row { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+    .modal-close { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); color: var(--muted); display: flex; align-items: center; justify-content: center; transition: background .15s, color .15s; }
+    .modal-close:hover { background: var(--text); color: #fff; }
+    .modal-name { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.65rem; color: var(--navy); line-height: 1.2; margin-bottom: 12px; }
+    .modal-badge { margin-bottom: 24px; }
+    .modal-badge .badge { font-size: 11px; padding: 4px 12px; }
+    .detail-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+    .size-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+    .size-chip { padding: 5px 12px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); font-size: 12px; font-weight: 600; color: var(--text); font-family: var(--font-mono); }
+    .no-sizes { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+    .photo-count { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .modal-ctas { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+    .btn-wa { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 20px; min-height: 48px; border-radius: 999px; background: #25D366; color: #fff; font-weight: 600; font-size: 14px; transition: background .18s, transform .15s; }
+    .btn-wa:hover { background: #1cb85a; transform: translateY(-1px); }
+    .btn-call { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 20px; min-height: 48px; border-radius: 999px; background: var(--navy); color: #fff; font-weight: 600; font-size: 14px; transition: background .18s, transform .15s; }
+    .btn-call:hover { background: #000055; transform: translateY(-1px); }
+    .modal-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 12px; line-height: 1.6; }
+
+    /* footer */
+    .site-footer { border-top: 1px solid var(--border); padding: 28px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 13px; color: var(--muted); transition: color .18s; }
+    .footer-links a:hover { color: var(--navy); }
+
+    /* responsive */
+    @media (max-width: 960px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 760px) {
+      .menu-toggle { display: flex; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(247,247,245,.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); flex-direction: column; padding: 8px 20px 16px; box-shadow: var(--shadow-md); gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links a { display: block; padding: 12px 8px; border-bottom: 1px solid var(--border); border-radius: 0; }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-links a[aria-current="page"] { background: none; }
+      /* stacked modal on tablet/mobile */
+      .modal-panel { grid-template-columns: 1fr; grid-template-rows: 52vh auto; height: auto; max-height: 92vh; border-radius: var(--r-md); }
+      .modal-info { border-left: none; border-top: 1px solid var(--border); padding: 20px; overflow-y: auto; }
+      .modal-ctas { margin-top: 16px; }
+    }
+    @media (max-width: 600px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .page-header { padding: 36px 0 24px; }
+      .filter-bar { padding: 18px 0 14px; }
+      /* bottom sheet on small phones */
+      .modal-backdrop { padding: 0; align-items: flex-end; }
+      .modal-panel { border-bottom-left-radius: 0; border-bottom-right-radius: 0; grid-template-rows: 46vh auto; max-height: 90vh; }
+      .gallery-thumbs { min-height: 60px; }
+      .gallery-thumb { width: 44px; height: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<header id="site-header">
+  <nav>
+    <a href="index.html" class="logo" aria-label="Arbuda Plastic home">
+      <div class="logo-mark">
+        <span class="logo-kabp">KABP</span>
+        <span class="logo-name">ARBUDA PLASTIC</span>
+      </div>
+      <span class="logo-sub">PVC &amp; EVA Footwear Manufacturer</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" id="menuToggle" aria-label="Toggle navigation menu">
+      <svg class="icon-menu" width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+        <rect y="0" width="18" height="2" rx="1" fill="currentColor"/>
+        <rect y="6" width="18" height="2" rx="1" fill="currentColor"/>
+        <rect y="12" width="18" height="2" rx="1" fill="currentColor"/>
+      </svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="nav-links" id="mobileNav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="products.html" aria-current="page">Products</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:+919821351511" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.81a19.79 19.79 0 01-3-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Call Now
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <div class="wrap">
+
+    <div class="page-header">
+      <h1>Our Products</h1>
+      <p>39 styles in PVC and EVA. Wholesale and OEM enquiries welcome.</p>
+    </div>
+
+    <div class="filter-bar" role="group" aria-label="Filter products">
+      <button class="filter-btn active" data-filter="all" type="button" aria-pressed="true">All</button>
+      <span class="filter-divider" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter="EVA" type="button" aria-pressed="false">EVA</button>
+      <button class="filter-btn" data-filter="PVC" type="button" aria-pressed="false">PVC</button>
+      <span class="filter-divider" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter="sandal" type="button" aria-pressed="false">Sandals</button>
+      <button class="filter-btn" data-filter="school-shoe" type="button" aria-pressed="false">School Shoes</button>
+      <span class="filter-divider" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter="slide" type="button" aria-pressed="false">Slides</button>
+      <button class="filter-btn" data-filter="slipper" type="button" aria-pressed="false">Slippers</button>
+    </div>
+
+    <div class="product-grid" id="productGrid" role="list" aria-label="Product catalogue">
+      <div class="empty-state" id="emptyState" aria-live="polite" aria-atomic="true">
+        No products match the selected filter.
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalProductName" aria-hidden="true">
+  <div class="modal-panel" id="modalPanel">
+
+    <div class="modal-gallery">
+      <div class="gallery-main">
+        <img id="galleryMain" src="" alt="" width="600" height="600" />
+        <div class="gallery-nav" aria-hidden="true">
+          <button class="gallery-arrow" id="galleryPrev" type="button" aria-label="Previous photo">
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true"><path d="M9 1L1 8l8 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="gallery-arrow" id="galleryNext" type="button" aria-label="Next photo">
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true"><path d="M1 1l8 7-8 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" id="galleryThumbs" role="list" aria-label="Photo thumbnails"></div>
+    </div>
+
+    <div class="modal-info" id="modalInfo">
+      <div class="modal-close-row">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close product detail">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <h2 class="modal-name" id="modalProductName"></h2>
+      <div class="modal-badge" id="modalBadge"></div>
+
+      <p class="detail-label">Available Sizes</p>
+      <div class="size-chips" id="modalSizes"></div>
+      <p class="photo-count" id="modalPhotoCount"></p>
+
+      <div class="modal-ctas">
+        <a class="btn-wa" id="modalWhatsApp" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enquire on WhatsApp
+        </a>
+        <a class="btn-call" href="tel:+919821351511">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.81a19.79 19.79 0 01-3-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call +91 98213 51511
+        </a>
+        <p class="modal-note">Wholesale and OEM enquiries only. Minimum order quantities apply.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-copy">© 2025 KABP Arbuda Plastic, Vasai East, Maharashtra</span>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mailto:arbudaplastic123@yahoo.in">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script id="products-data" type="application/json">
+[{"id":"abibas","name":"Abibas","material":"EVA","sizes":["7x10"],"thumbnail":"Products/Abibas.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Abibas%21/IMG_3570.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Abibas%21/IMG_3571.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Abibas%21/IMG_3572.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Abibas%21/IMG_3573.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Abibas%21/IMG_3574.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Abibas%21/IMG_3575.jpg"],"type":["sandal"]},{"id":"air","name":"Air","material":"EVA","sizes":["7x10"],"thumbnail":"Products/Air.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Air%21/IMG_3566.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Air%21/IMG_3567.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Air%21/IMG_3568.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Air%21/IMG_3569.jpeg"],"type":["sandal"]},{"id":"anita","name":"Anita","material":"PVC","sizes":["5x8"],"thumbnail":"Products/Anita.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Anita%21/IMG_3591.jpg"],"type":["slipper"]},{"id":"annu","name":"Annu","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Annu.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Annu%21/IMG_3416.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Annu%21/IMG_3417.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Annu%21/IMG_3418.jpeg"],"type":["slipper"]},{"id":"apple","name":"Apple","material":"EVA","sizes":["2x5","6x9"],"thumbnail":"Products/Apple.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3336.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3337.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3338.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3339.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3340.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3341.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3342.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3343.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Apple%21/IMG_3344.jpeg"],"type":["slipper"]},{"id":"dp-0131","name":"DP-0131","material":"PVC","sizes":["6x9"],"thumbnail":"Products/DP-0131.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20-0131/IMG_3367.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20-0131/IMG_3369.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20-0131/IMG_3371.jpg"],"type":["slipper"]},{"id":"dp-school-shoes","name":"DP School Shoes","material":"EVA","sizes":["1x3","4x6","7x10","11x13","8x10","5x7"],"thumbnail":"Products/DP-School-Shoes1.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3608.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3609.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3611.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3612.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3613.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3614.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3615.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3616.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP%20School%20shoes/IMG_3617.jpg"],"type":["school-shoe"]},{"id":"dp-1101","name":"DP-1101","material":"PVC","sizes":["6x9"],"thumbnail":"Products/DP-1101.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1101/IMG_3621.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1101/IMG_3622.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1101/IMG_3623.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1101/IMG_3624.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1101/IMG_3625.jpg"],"type":["slipper"]},{"id":"dp-1102","name":"DP-1102","material":"PVC","sizes":["6x9"],"thumbnail":"Products/DP-1102.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1102/IMG_3626.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/DP-1102/IMG_3627.jpeg"],"type":["slipper"]},{"id":"dr-hi-fi-choice","name":"Dr Hi-Fi Choice","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Dr-Hi-Fi-Choice.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Hi-Fi%20Choice%21/IMG_3440.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Hi-Fi%20Choice%21/IMG_3441.jpeg"],"type":["slipper"]},{"id":"dr-rani","name":"Dr Rani","material":"EVA","sizes":["5x8","6x9"],"thumbnail":"Products/Dr-rani.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3323.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3324.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3325.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3326.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3327.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3328.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3329.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3330.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3331.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3332.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3333.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3334.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Dr%20Rani%21/IMG_3335.jpeg"],"type":["slipper"]},{"id":"duster","name":"Duster","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Duster.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Duster%21/IMG_3634.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Duster%21/IMG_3635.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Duster%21/IMG_3636.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Duster%21/IMG_3637.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Duster%21/IMG_3638.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Duster%21/IMG_3639.jpg"],"type":["slipper"]},{"id":"express","name":"Express","material":"EVA","sizes":["6x9","4x5","1x3","11x13","7x10"],"thumbnail":"Products/Express.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Express%21/IMG_3576.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Express%21/IMG_3577.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Express%21/IMG_3578.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Express%21/IMG_3579.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Express%21/IMG_3664.jpeg"],"type":["sandal"]},{"id":"f-16","name":"F-16","material":"EVA","sizes":["6x9"],"thumbnail":"Products/F-16.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3381.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3382.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3383.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3384.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3385.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3386.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3387.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-16%21/IMG_3388.jpeg"],"type":["slide"]},{"id":"f-35","name":"F-35","material":"EVA","sizes":["6x9"],"thumbnail":"Products/F-35.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3396%20copy.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3398%20copy.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3399%20copy.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3400%20copy.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3401%20copy.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3402%20copy.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/F-35%21/IMG_3403%20copy.jpeg"],"type":["slipper"]},{"id":"fastar","name":"Fastar","material":"EVA","sizes":["6x9","4x5","1x3","11x13","7x10"],"thumbnail":"Products/Fastar.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Fastar%21/IMG_3564.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Fastar%21/IMG_3565.jpg"],"type":["sandal"]},{"id":"hi-kitty","name":"Hi Kitty","material":"EVA","sizes":["1x3","11x13","7x10"],"thumbnail":"Products/Hi-Kitty.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Hi%20KItty%21/IMG_3628.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Hi%20KItty%21/IMG_3629.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Hi%20KItty%21/IMG_3630.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Hi%20KItty%21/IMG_3631.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Hi%20KItty%21/IMG_3632.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Hi%20KItty%21/IMG_3633.jpeg"],"type":["slipper"]},{"id":"honey-rose","name":"Honey Rose","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Honey-Rose.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Honey%20rose%21/IMG_3590.jpg"],"type":["slipper"]},{"id":"jyoti","name":"Jyoti","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Jyoti.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3455.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3456.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3457.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3458.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3459.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3460.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Jyoti%21/IMG_3461.jpg"],"type":["slipper"]},{"id":"karishma","name":"Karishma","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Karishma.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Karishma%21/IMG_3442.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Karishma%21/IMG_3443.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Karishma%21/IMG_3444.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Karishma%21/IMG_3445.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Karishma%21/IMG_3447.jpg"],"type":["slipper"]},{"id":"kartik","name":"Kartik","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Kartik.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kartik%21/IMG_3376.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kartik%21/IMG_3377.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kartik%21/IMG_3378.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kartik%21/IMG_3379.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kartik%21/IMG_3380.jpeg"],"type":["slipper"]},{"id":"kavya","name":"Kavya","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Kavya.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3353.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3354.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3355.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3356.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3357.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3358.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3359.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kavya%21/IMG_3360.jpg"],"type":["slipper"]},{"id":"kinjal","name":"Kinjal","material":"EVA","sizes":["5x8","1x3","11x13"],"thumbnail":"Products/Kinjal.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kinjal%21/IMG_3618.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kinjal%21/IMG_3619.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Kinjal%21/IMG_3620.jpeg"],"type":["slipper"]},{"id":"manshi","name":"Manshi","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Manshi.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Manshi%21/IMG_3419.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Manshi%21/IMG_3420.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Manshi%21/IMG_3421.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Manshi%21/IMG_3422.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Manshi%21/IMG_3423.jpeg"],"type":["slipper"]},{"id":"ny-luxury","name":"NY & Luxury","material":"EVA","sizes":["6x9"],"thumbnail":"Products/NY-Luxury.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/NY%20%26%20Luxury%21/IMG_3435.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/NY%20%26%20Luxury%21/IMG_3436.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/NY%20%26%20Luxury%21/IMG_3437.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/NY%20%26%20Luxury%21/IMG_3438.jpg"],"type":["slide"]},{"id":"pal-pal","name":"Pal Pal","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Pal-Pal.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3407.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3408.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3409.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3410.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3411.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3412.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Pal%20Pal%21/IMG_3413.jpeg"],"type":["slipper"]},{"id":"rock","name":"Rock","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Rock.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rock%21/IMG_3372.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rock%21/IMG_3373.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rock%21/IMG_3374.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rock%21/IMG_3375.jpeg"],"type":["slipper"]},{"id":"rocket","name":"Rocket","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Rocket.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3389.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3390.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3391.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3392.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3393.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3394.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3395.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Rocket%21/IMG_3439.jpeg"],"type":["slipper"]},{"id":"roma","name":"Roma","material":"EVA","sizes":["5x8","1x4","11x13","7x10"],"thumbnail":"Products/Roma.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Roma%21/IMG_3308.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Roma%21/IMG_3309.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Roma%21/IMG_3310.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Roma%21/IMG_3311.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Roma%21/IMG_3312.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Roma%21/IMG_3313.jpg"],"type":["sandal"]},{"id":"ruchi","name":"Ruchi","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Ruchi.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3448.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3449.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3450.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3451.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3452.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3453.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Ruchi%21/IMG_3454.jpeg"],"type":["slipper"]},{"id":"safar","name":"Safar","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Safar.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Safar%21/IMG_3362.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Safar%21/IMG_3363.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Safar%21/IMG_3364.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Safar%21/IMG_3365.jpg"],"type":["slipper"]},{"id":"sangita","name":"Sangita","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Sangita.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3345.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3346.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3347.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3348.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3349.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3350.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3351.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sangita%21/IMG_3352.jpg"],"type":["slipper"]},{"id":"school-king","name":"School King Sandal","material":"EVA","sizes":["6x9","4x5","1x3","11x13","7x10"],"thumbnail":"Products/School-King.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/School%20King%20Sandal/IMG_3300.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/School%20King%20Sandal/IMG_3302.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/School%20King%20Sandal/IMG_3304.jpg"],"type":["sandal","school-shoe"]},{"id":"shilpa","name":"Shilpa","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Shilpa.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Shilpa%21/IMG_3414.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Shilpa%21/IMG_3415.jpeg"],"type":["slipper"]},{"id":"storm","name":"Storm","material":"EVA","sizes":["2x5","6x9"],"thumbnail":"Products/Storm.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Storm%21/IMG_3316.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Storm%21/IMG_3317.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Storm%21/IMG_3432.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Storm%21/IMG_3433.jpeg"],"type":["slide"]},{"id":"sujata","name":"Sujata","material":"PVC","sizes":["5x8"],"thumbnail":"Products/Sujata.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Sujata%21/IMG_3592.jpg"],"type":["slipper"]},{"id":"tarzan","name":"Tarzan","material":"EVA","sizes":["6x9"],"thumbnail":"Products/Tarzan.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Tarzan%21/IMG_3318.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Tarzan%21/IMG_3319.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Tarzan%21/IMG_3320.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Tarzan%21/IMG_3321.jpeg"],"type":["slide"]},{"id":"toofan","name":"Toofan","material":"PVC","sizes":["6x9"],"thumbnail":"Products/Toofan.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Toofan%21/IMG_3641.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Toofan%21/IMG_3642.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Toofan%21/IMG_3643.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Toofan%21/IMG_3645.jpeg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Toofan%21/IMG_3647.jpeg"],"type":["slipper"]},{"id":"young-lady","name":"Young Lady","material":"EVA","sizes":["5x8"],"thumbnail":"Products/Young-Lady.png","photos":["https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3424%20copy.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3425%20copy.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3426%20copy.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3427.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3428.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3429.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3430%20copy.jpg","https://oymycpqxjbrsgbeybrcn.supabase.co/storage/v1/object/public/product-photos/Young%20Lady%21/IMG_3431%20copy.jpg"],"type":["slipper"]}]
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  function encodePath(raw) {
+    if (raw.startsWith('http')) return raw;
+    return raw.split('/').map(encodeURIComponent).join('/');
+  }
+
+  /* nav shadow */
+  var siteHeader = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  /* mobile nav */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileNav  = document.getElementById('mobileNav');
+  menuToggle.addEventListener('click', function () {
+    var open = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(open));
+  });
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!mobileNav.contains(e.target) && e.target !== menuToggle) {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* state */
+  var allProducts   = [];
+  var activeFilter  = 'all';
+  var activeProduct = null;
+  var activePhoto   = 0;
+
+  /* DOM */
+  var grid          = document.getElementById('productGrid');
+  var emptyState    = document.getElementById('emptyState');
+  var filterBtns    = document.querySelectorAll('.filter-btn');
+  var backdrop      = document.getElementById('modalBackdrop');
+  var galleryMain   = document.getElementById('galleryMain');
+  var galleryThumbs = document.getElementById('galleryThumbs');
+  var galleryPrev   = document.getElementById('galleryPrev');
+  var galleryNext   = document.getElementById('galleryNext');
+  var modalName     = document.getElementById('modalProductName');
+  var modalBadge    = document.getElementById('modalBadge');
+  var modalSizes    = document.getElementById('modalSizes');
+  var modalCount    = document.getElementById('modalPhotoCount');
+  var modalWA       = document.getElementById('modalWhatsApp');
+  var modalClose    = document.getElementById('modalClose');
+
+  /* load — inline data works on file:// and HTTP alike */
+  try {
+    allProducts = JSON.parse(document.getElementById('products-data').textContent);
+    renderGrid();
+  } catch (e) {
+    emptyState.textContent = 'Unable to load products. Please refresh or contact us directly.';
+    emptyState.classList.add('visible');
+  }
+
+  /* render grid */
+  function renderGrid() {
+    Array.from(grid.querySelectorAll('.product-card')).forEach(function (c) { c.remove(); });
+    var visible = 0;
+
+    allProducts.forEach(function (p, idx) {
+      var show = activeFilter === 'all' ||
+                 p.material === activeFilter ||
+                 (p.type && p.type.indexOf(activeFilter) !== -1);
+      var card = document.createElement('div');
+      card.className = 'product-card';
+      card.setAttribute('role', 'listitem');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', p.name + ', ' + p.material + ' footwear');
+      if (!show) { card.hidden = true; } else { visible++; }
+
+      var thumb = document.createElement('div');
+      thumb.className = 'card-thumb';
+      var img = document.createElement('img');
+      img.src     = encodePath(p.thumbnail);
+      img.alt     = p.name;
+      img.width   = 300;
+      img.height  = 300;
+      img.loading = idx < 8 ? 'eager' : 'lazy';
+      thumb.appendChild(img);
+
+      var body = document.createElement('div');
+      body.className = 'card-body';
+      var nameEl = document.createElement('p');
+      nameEl.className = 'card-name';
+      nameEl.textContent = p.name;
+      var meta = document.createElement('div');
+      meta.className = 'card-meta';
+      var badge = document.createElement('span');
+      badge.className = 'badge badge-' + p.material.toLowerCase();
+      badge.textContent = p.material;
+      meta.appendChild(badge);
+      if (p.sizes && p.sizes.length) {
+        var sz = document.createElement('span');
+        sz.className = 'card-sizes';
+        sz.textContent = p.sizes.slice(0, 3).join(', ') + (p.sizes.length > 3 ? '...' : '');
+        meta.appendChild(sz);
+      }
+      body.appendChild(nameEl);
+      body.appendChild(meta);
+      card.appendChild(thumb);
+      card.appendChild(body);
+
+      (function (product) {
+        function open() { openModal(product); }
+        card.addEventListener('click', open);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+        });
+      }(p));
+
+      grid.appendChild(card);
+    });
+
+    emptyState.classList.toggle('visible', visible === 0);
+  }
+
+  /* filter */
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeFilter = btn.dataset.filter;
+      filterBtns.forEach(function (b) {
+        var active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+      renderGrid();
+    });
+  });
+
+  /* open modal */
+  function openModal(p) {
+    activeProduct = p;
+    activePhoto   = 0;
+
+    modalName.textContent = p.name;
+    modalBadge.innerHTML  = '<span class="badge badge-' + p.material.toLowerCase() + '">' + p.material + ' Footwear</span>';
+
+    modalSizes.innerHTML = '';
+    if (p.sizes && p.sizes.length) {
+      p.sizes.forEach(function (s) {
+        var chip = document.createElement('span');
+        chip.className = 'size-chip';
+        chip.textContent = s;
+        modalSizes.appendChild(chip);
+      });
+    } else {
+      var noSz = document.createElement('p');
+      noSz.className = 'no-sizes';
+      noSz.textContent = 'Contact us for size availability.';
+      modalSizes.appendChild(noSz);
+    }
+
+    var n = (p.photos && p.photos.length) ? p.photos.length : 0;
+    modalCount.textContent = n ? n + ' photo' + (n !== 1 ? 's' : '') : '';
+
+    var msg = encodeURIComponent('Hi, I am interested in the ' + p.name + ' (' + p.material + ') footwear. Please share pricing and MOQ details.');
+    modalWA.href = 'https://wa.me/919821351511?text=' + msg;
+
+    buildGallery();
+
+    backdrop.classList.add('open');
+    backdrop.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { modalClose.focus(); }, 60);
+  }
+
+  /* build gallery (on open) */
+  function buildGallery() {
+    var photos = (activeProduct && activeProduct.photos) ? activeProduct.photos : [];
+    galleryThumbs.innerHTML = '';
+
+    if (!photos.length) {
+      galleryMain.src = encodePath(activeProduct.thumbnail);
+      galleryMain.alt = activeProduct.name;
+      galleryPrev.disabled = true;
+      galleryNext.disabled = true;
+      return;
+    }
+
+    photos.forEach(function (src, i) {
+      var t = document.createElement('div');
+      t.className = 'gallery-thumb' + (i === 0 ? ' active' : '');
+      t.setAttribute('role', 'listitem');
+      t.setAttribute('tabindex', '0');
+      t.setAttribute('aria-label', 'Photo ' + (i + 1));
+      var ti = document.createElement('img');
+      ti.src = encodePath(src); ti.alt = ''; ti.width = 52; ti.height = 52; ti.loading = 'lazy';
+      t.appendChild(ti);
+      (function (index) {
+        t.addEventListener('click', function () { setPhoto(index); });
+        t.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setPhoto(index); }
+        });
+      }(i));
+      galleryThumbs.appendChild(t);
+    });
+
+    setPhoto(0);
+  }
+
+  function setPhoto(idx) {
+    var photos = (activeProduct && activeProduct.photos) ? activeProduct.photos : [];
+    if (!photos.length) return;
+    activePhoto = idx;
+    galleryMain.src = encodePath(photos[idx]);
+    galleryMain.alt = activeProduct.name + ', photo ' + (idx + 1) + ' of ' + photos.length;
+    galleryPrev.disabled = idx === 0;
+    galleryNext.disabled = idx === photos.length - 1;
+    Array.from(galleryThumbs.querySelectorAll('.gallery-thumb')).forEach(function (t, i) {
+      t.classList.toggle('active', i === idx);
+    });
+    var active = galleryThumbs.children[idx];
+    if (active) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+
+  galleryPrev.addEventListener('click', function () {
+    if (activePhoto > 0) setPhoto(activePhoto - 1);
+  });
+  galleryNext.addEventListener('click', function () {
+    if (activeProduct && activePhoto < activeProduct.photos.length - 1) setPhoto(activePhoto + 1);
+  });
+
+  /* close modal */
+  function closeModal() {
+    backdrop.classList.remove('open');
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    activeProduct = null;
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', function (e) { if (e.target === backdrop) closeModal(); });
+
+  document.addEventListener('keydown', function (e) {
+    if (!backdrop.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    if (e.key === 'ArrowLeft' && activePhoto > 0) { e.preventDefault(); setPhoto(activePhoto - 1); }
+    if (e.key === 'ArrowRight' && activeProduct && activePhoto < activeProduct.photos.length - 1) { e.preventDefault(); setPhoto(activePhoto + 1); }
+  });
+
+  /* focus trap */
+  document.getElementById('modalPanel').addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var els = Array.from(this.querySelectorAll('button:not([disabled]), a[href], [tabindex="0"]')).filter(function (el) { return !el.hidden; });
+    if (!els.length) return;
+    if (e.shiftKey && document.activeElement === els[0]) { e.preventDefault(); els[els.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === els[els.length - 1]) { e.preventDefault(); els[0].focus(); }
+  });
+
+}());
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Internal dev files — never commit
+CLAUDE.md
+CLAUDE.local.md
+DESIGN.md
+PRODUCT.md
+
+# Tool directories
+.impeccable/
+
+# Product photos — 2.6GB, hosted on Supabase Storage instead
+Product photos/
+
+# Old working file
+index_v2.html
