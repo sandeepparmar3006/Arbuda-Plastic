@@ -26,6 +26,12 @@ Arbuda Plastic manufactures and wholesales PVC and EVA footwear — slippers, sa
 - Hardened security headers: CSP (no `unsafe-eval`), HSTS, X-Frame-Options `DENY`, `nosniff`, strict `Referrer-Policy`
 - WCAG AA target — focus rings, ARIA landmarks, 44px minimum touch targets, reduced-motion support
 
+## Lighthouse scores
+
+| SEO | Accessibility | Best Practices | LCP | CLS |
+|-----|---------------|-----------------|-----|-----|
+| 100 | 96 | 96 | 224ms | 0.00 |
+
 ## Design principles
 
 Built for a wholesale buyer scanning for a supplier, not a retail shopper browsing a brand. Direct, plain-spoken copy. Credibility over decoration. Optimized for 4G Indian mobile connections — no heavy dependencies.
