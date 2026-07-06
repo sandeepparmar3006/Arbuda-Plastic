@@ -4,6 +4,8 @@ Official website for **Arbuda Plastic (KABP)** — a PVC & EVA footwear manufact
 
 **Live site:** [arbudaplastic.co.in](https://www.arbudaplastic.co.in/)
 
+![Arbuda Plastic homepage](assets/screenshots/homepage.jpg)
+
 ## About
 
 Arbuda Plastic manufactures and wholesales PVC and EVA footwear — slippers, sandals, and school shoes — direct from its own factory. The site serves wholesale distributors, retailers, OEM buyers, and export agents sourcing footwear in bulk across India.
@@ -41,6 +43,10 @@ CNAME                 Custom domain config for GitHub Pages
 ## Status
 
 Live and stable. Maintained on an as-needed basis.
+
+## License
+
+All rights reserved. See [LICENSE](LICENSE).
 
 ---
 
