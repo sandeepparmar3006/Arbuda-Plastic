@@ -249,9 +249,13 @@
   viewport.addEventListener('touchend', pauseTemporarily, { passive: true });
 
   /* ── Pointer drag to scroll ── */
-  var dragging = false, startX = 0, startScroll = 0;
+  var dragging = false, startX = 0, startScroll = 0, dragMoved = false;
 
   viewport.addEventListener('pointerdown', function (e) {
+    dragMoved = false;
+    /* don't capture the pointer on links — capture retargets the click
+       to the viewport and the link never activates */
+    if (e.target.closest('a')) return;
     dragging = true;
     paused = true;
     startX = e.clientX;
@@ -261,6 +265,7 @@
   });
   viewport.addEventListener('pointermove', function (e) {
     if (!dragging) return;
+    if (Math.abs(e.clientX - startX) > 5) dragMoved = true;
     viewport.scrollLeft = startScroll - (e.clientX - startX);
     normalize();
   });
@@ -276,7 +281,7 @@
 
   /* Suppress accidental link clicks after a drag */
   viewport.addEventListener('click', function (e) {
-    if (Math.abs(viewport.scrollLeft - startScroll) > 5 && e.target.closest('a')) {
+    if (dragMoved && e.target.closest('a')) {
       e.preventDefault();
       e.stopPropagation();
     }
