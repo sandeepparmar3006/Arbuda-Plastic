@@ -4,7 +4,7 @@ Official website for **Arbuda Plastic (KABP)** — a PVC & EVA footwear manufact
 
 **Live site:** [arbudaplastic.co.in](https://www.arbudaplastic.co.in/)
 
-![Arbuda Plastic homepage](assets/screenshots/homepage.jpg)
+![Arbuda Plastic homepage](assets/screenshots/homepage.jpeg)
 
 ## About
 
