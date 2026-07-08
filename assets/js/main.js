@@ -186,6 +186,7 @@
     cards.forEach(function (c) {
       var clone = c.cloneNode(true);
       clone.setAttribute('aria-hidden', 'true');
+      clone.querySelectorAll('a').forEach(function (a) { a.setAttribute('tabindex', '-1'); });
       track.appendChild(clone);
     });
     halfWidth = track.scrollWidth / 2;
@@ -272,6 +273,14 @@
   }
   viewport.addEventListener('pointerup', endDrag);
   viewport.addEventListener('pointercancel', endDrag);
+
+  /* Suppress accidental link clicks after a drag */
+  viewport.addEventListener('click', function (e) {
+    if (Math.abs(viewport.scrollLeft - startScroll) > 5 && e.target.closest('a')) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
 
   /* Keyboard focus pauses (a11y) */
   viewport.addEventListener('focusin', function () { paused = true; });
