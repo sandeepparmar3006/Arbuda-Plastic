@@ -552,6 +552,61 @@
     .card ul { padding-left: 18px; display: grid; gap: 6px; }
     .card ul li::marker { color: var(--crimson); }
 
+    /* Production journey */
+    .journey-head { margin-top: 64px; }
+    .journey-head h3 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .journey-head p { color: var(--muted); font-size: 15px; max-width: 68ch; }
+    .journey { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+    .journey-step {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .journey-step img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; display: block; }
+    .journey-step figcaption { padding: 16px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .step-num {
+      display: block;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--crimson);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .step-name { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .journey-anchor {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      align-items: center;
+      border-top: 3px solid var(--crimson);
+    }
+    .journey-anchor img { aspect-ratio: 3/4; height: 100%; }
+    .journey-anchor figcaption { padding: 24px; }
+    @media (max-width: 768px) {
+      .journey {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) transparent;
+        padding-bottom: 8px;
+      }
+      .journey-step { flex: 0 0 78%; scroll-snap-align: start; }
+      .journey-anchor { display: block; }
+      .journey-anchor img { aspect-ratio: 4/3; height: auto; }
+    }
+
     /* Policy card variant */
     .card-policy { border-top: 3px solid var(--crimson); }
     .policy-icon {
@@ -1179,6 +1234,33 @@
   <div class="wrap">
     <h2>Who we are.</h2>
     <p style="color:var(--muted);max-width:68ch;font-size:15px">Arbuda Plastic has manufactured PVC and EVA footwear at our Vasai East factory since 2014. Over a decade supplying wholesale distributors, OEM brands, and bulk buyers across India.</p>
+
+    <div class="journey-head">
+      <h3>From granule to dispatch.</h3>
+      <p>Every pair is made end-to-end at our Sativali factory. Here is how an order moves through the floor.</p>
+    </div>
+    <div class="journey">
+      <figure class="journey-step">
+        <img src="assets/factory/factory-material.webp" width="1200" height="900" alt="Basins of grey and black PVC granules with colour-measuring cups beside a hydraulic press control panel" loading="lazy" />
+        <figcaption><span class="step-num">01</span><span class="step-name">Raw Material</span>PVC and EVA granules batched and colour-matched in-house before every run.</figcaption>
+      </figure>
+      <figure class="journey-step">
+        <img src="assets/factory/factory-moulding.webp" width="1200" height="900" alt="Freshly moulded grey and orange EVA soles laid out in front of two hydraulic press machines" loading="lazy" />
+        <figcaption><span class="step-num">02</span><span class="step-name">Moulding</span>Hydraulic presses mould soles and straps under controlled heat and pressure.</figcaption>
+      </figure>
+      <figure class="journey-step">
+        <img src="assets/factory/factory-finishing.webp" width="1200" height="900" alt="Workers trimming and pairing footwear at benches on the Arbuda Plastic factory floor" loading="lazy" />
+        <figcaption><span class="step-num">03</span><span class="step-name">Finishing</span>Every pair is trimmed, assembled and checked by hand before it leaves the bench.</figcaption>
+      </figure>
+      <figure class="journey-step">
+        <img src="assets/factory/factory-dispatch.webp" width="900" height="1200" alt="Strapped cartons of finished footwear stacked at the factory dispatch bay" loading="lazy" />
+        <figcaption><span class="step-num">04</span><span class="step-name">Dispatch</span>Orders packed, strapped and dispatched to distributors across India.</figcaption>
+      </figure>
+      <figure class="journey-step journey-anchor">
+        <img src="assets/factory/factory-entrance.webp" width="900" height="1200" alt="Arbuda Plastic factory entrance with signboards showing the company name, GSTIN and address" loading="lazy" />
+        <figcaption><span class="step-name">Registered facility &middot; Sativali, Vasai East</span>Our GSTIN-registered unit at Meghdoot Signature, Waliv Phata. Factory visits welcome by appointment for wholesale and OEM buyers.</figcaption>
+      </figure>
+    </div>
 
     <div class="about-grid">
 
