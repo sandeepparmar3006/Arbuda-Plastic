@@ -12,9 +12,10 @@ Arbuda Plastic manufactures and wholesales PVC and EVA footwear — slippers, sa
 
 ## What the site does
 
-- **Product catalog** — 40+ styles across PVC and EVA footwear, organized for quick scanning by a B2B buyer
+- **Product catalog** — 40+ styles across PVC and EVA footwear, organized for quick scanning by a B2B buyer, with a downloadable PDF catalogue
+- **Production journey** — a photo strip of the actual factory floor (raw material → moulding → finishing → dispatch), plus a registered-facility card tying back to the GSTIN
 - **Lead capture** — phone, WhatsApp (pre-filled message), and email, visible at every scroll depth
-- **Trust signals** — founding year, full factory address, IndiaMART and Facebook presence, warranty/return policy
+- **Trust signals** — founding year, full factory address, GSTIN, minimum order quantities, IndiaMART and Facebook presence, warranty/return policy
 - **No cart, no checkout** — by design. The product is the enquiry, not a transaction
 
 ## Tech
@@ -39,10 +40,11 @@ Built for a wholesale buyer scanning for a supplier, not a retail shopper browsi
 ## Structure
 
 ```
-index.html          Homepage — hero, product highlights, trust signals, contact
+index.html          Homepage — hero, product highlights, production journey, trust signals, contact
 products.html        Full product catalog
 Products/             Product images
-assets/               Static assets, scripts
+assets/factory/       Factory production photos (About section)
+arbuda-catalogue.pdf   Downloadable product catalogue
 CNAME                 Custom domain config for GitHub Pages
 ```
 
