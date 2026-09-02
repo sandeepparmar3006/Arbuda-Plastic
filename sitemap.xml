@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.arbudaplastic.co.in/</loc>
     <lastmod>2026-09-02</lastmod>
@@ -11,5 +12,177 @@
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Abibas.webp</image:loc>
+      <image:title>Abibas EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Air.webp</image:loc>
+      <image:title>Air EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Anita.webp</image:loc>
+      <image:title>Anita PVC footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Annu.webp</image:loc>
+      <image:title>Annu EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Apple.webp</image:loc>
+      <image:title>Apple EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/DP-0131.webp</image:loc>
+      <image:title>DP-0131 EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/DP-School-Shoes1.webp</image:loc>
+      <image:title>DP School Shoes EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/DP-1101.webp</image:loc>
+      <image:title>DP-1101 PVC footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/DP-1102.webp</image:loc>
+      <image:title>DP-1102 PVC footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Dr-Hi-Fi-Choice.webp</image:loc>
+      <image:title>Dr Hi-Fi Choice EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Dr-rani.webp</image:loc>
+      <image:title>Dr Rani EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Dr-Tanvi.webp</image:loc>
+      <image:title>Dr Tanvi EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Duster.webp</image:loc>
+      <image:title>Duster EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Express.webp</image:loc>
+      <image:title>Express EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/F-16.webp</image:loc>
+      <image:title>F-16 EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/F-35.webp</image:loc>
+      <image:title>F-35 EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Fastar.webp</image:loc>
+      <image:title>Fastar EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Hi-Kitty.webp</image:loc>
+      <image:title>Hi Kitty EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Honey-Rose.webp</image:loc>
+      <image:title>Honey Rose EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Jyoti.webp</image:loc>
+      <image:title>Jyoti EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Karishma.webp</image:loc>
+      <image:title>Karishma EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Kartik.webp</image:loc>
+      <image:title>Kartik EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Kavya.webp</image:loc>
+      <image:title>Kavya EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Kinjal.webp</image:loc>
+      <image:title>Kinjal EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Ladli.webp</image:loc>
+      <image:title>Ladli EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Manshi.webp</image:loc>
+      <image:title>Manshi EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/NY-Luxury.webp</image:loc>
+      <image:title>NY &amp; Luxury EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Pal-Pal.webp</image:loc>
+      <image:title>Pal Pal EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Rock.webp</image:loc>
+      <image:title>Rock EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Rocket.webp</image:loc>
+      <image:title>Rocket EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Roma.webp</image:loc>
+      <image:title>Roma EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Ruchi.webp</image:loc>
+      <image:title>Ruchi EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Safar.webp</image:loc>
+      <image:title>Safar EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Samrat.webp</image:loc>
+      <image:title>Samrat EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Sangita.webp</image:loc>
+      <image:title>Sangita EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/School-King.webp</image:loc>
+      <image:title>School King Sandal EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Shilpa.webp</image:loc>
+      <image:title>Shilpa EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Simpy.webp</image:loc>
+      <image:title>Simpy EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Storm.webp</image:loc>
+      <image:title>Storm EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Sujata.webp</image:loc>
+      <image:title>Sujata PVC footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Tarzan.webp</image:loc>
+      <image:title>Tarzan EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Toofan.webp</image:loc>
+      <image:title>Toofan PVC footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Young-Lady.webp</image:loc>
+      <image:title>Young Lady EVA footwear</image:title>
+    </image:image>
   </url>
 </urlset>
