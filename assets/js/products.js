@@ -69,7 +69,7 @@
 
   /* ItemList schema built from the same inline data — no duplicated product list to keep in sync */
   function injectProductSchema() {
-    var base = 'https://arbudaplastic.co.in/';
+    var base = 'https://www.arbudaplastic.co.in/';
     var el = document.createElement('script');
     el.type = 'application/ld+json';
     el.textContent = JSON.stringify({
