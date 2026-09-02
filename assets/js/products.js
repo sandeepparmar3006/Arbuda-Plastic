@@ -61,9 +61,39 @@
   try {
     allProducts = JSON.parse(document.getElementById('products-data').textContent);
     renderGrid();
+    injectProductSchema();
   } catch (e) {
     emptyState.textContent = 'Unable to load products. Please refresh or contact us directly.';
     emptyState.classList.add('visible');
+  }
+
+  /* ItemList schema built from the same inline data — no duplicated product list to keep in sync */
+  function injectProductSchema() {
+    var base = 'https://arbudaplastic.co.in/';
+    var el = document.createElement('script');
+    el.type = 'application/ld+json';
+    el.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Arbuda Plastic PVC & EVA Footwear Range',
+      numberOfItems: allProducts.length,
+      itemListElement: allProducts.map(function (p, i) {
+        return {
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'Product',
+            name: p.name,
+            image: base + encodePath(p.thumbnail),
+            material: p.material,
+            category: (p.type || []).join(', '),
+            brand: { '@type': 'Brand', name: 'KABP' },
+            manufacturer: { '@id': base + '#business' }
+          }
+        };
+      })
+    });
+    document.head.appendChild(el);
   }
 
   /* render grid */
@@ -86,7 +116,7 @@
       thumb.className = 'card-thumb';
       var img = document.createElement('img');
       img.src     = encodePath(p.thumbnail);
-      img.alt     = p.name;
+      img.alt     = p.name + ' ' + p.material + ' footwear by Arbuda Plastic';
       img.width   = 300;
       img.height  = 300;
       img.loading = idx < 8 ? 'eager' : 'lazy';
