@@ -82,7 +82,7 @@
           '@type': 'ListItem',
           position: i + 1,
           item: {
-            '@type': 'Product',
+            '@type': 'Thing',
             name: p.name,
             image: base + encodePath(p.thumbnail),
             material: p.material,
