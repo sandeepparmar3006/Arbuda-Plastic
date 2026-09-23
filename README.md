@@ -22,10 +22,10 @@ Arbuda Plastic manufactures and wholesales PVC and EVA footwear under its own br
 
 - Vanilla HTML/CSS/JS — no framework, no bundler, no npm dependencies
 - Hosted on GitHub Pages with a custom domain (`CNAME`)
-- WebP images with lazy-loading below the fold; hero preloaded for LCP
+- WebP images with lazy-loading below the fold and responsive `srcset`; self-hosted, preloaded woff2 fonts (no Google Fonts request)
 - JSON-LD `Manufacturer` structured data, Open Graph tags, single-H1 hierarchy
-- Hardened security headers: CSP (no `unsafe-eval`), HSTS, X-Frame-Options `DENY`, `nosniff`, strict `Referrer-Policy`
-- WCAG AA target — focus rings, ARIA landmarks, 44px minimum touch targets, reduced-motion support
+- Strict Content Security Policy (no `unsafe-eval`, fonts and scripts from `'self'` plus Cloudflare Web Analytics only), `nosniff`, strict `Referrer-Policy`, locked-down `Permissions-Policy`, set via `<meta>` since GitHub Pages cannot send custom headers
+- WCAG AA — contrast-checked tokens, focus rings, ARIA landmarks, inert modal when closed, 44px minimum touch targets, reduced-motion support
 
 ## Lighthouse scores
 
