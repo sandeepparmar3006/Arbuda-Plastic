@@ -127,6 +127,8 @@
 
     /* grid */
     .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-bottom: 80px; }
+    /* reserve space until products.js renders cards, else footer paints in view then jumps (CLS) */
+    .product-grid:not(:has(.product-card)) { min-height: 100vh; }
     .product-card { background: var(--surface); border-radius: var(--r-md); border: 1px solid var(--border); overflow: hidden; cursor: pointer; transition: transform .2s, box-shadow .2s; }
     .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
     .product-card:focus-visible { outline: 2px solid var(--crimson); outline-offset: 2px; }
