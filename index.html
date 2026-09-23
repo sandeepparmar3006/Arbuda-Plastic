@@ -41,7 +41,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -93,15 +93,16 @@
       --navy:       #000033;
       --crimson:    #B30000;
       --crimson-dk: #8C0000;
+      --crimson-lt: #E23B3B;   /* crimson text on navy: 4.7:1 (base crimson is 2.8:1) */
       --bg:         #F7F7F5;
       --surface:    #FFFFFF;
       --border:     rgba(0,0,51,.09);
-      --muted:      #64748B;
+      --muted:      #5E6B80;
       --text:       #1A1A2E;
       --amber:      #D97706;
 
       --font-display: 'Instrument Serif', Georgia, serif;
-      --font-mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
       --r-sm: 12px;
       --r-md: 18px;
@@ -172,7 +173,7 @@
       margin: 0 auto;
       padding: 16px 0;
     }
-    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo { display: flex; flex-direction: column; }
     .logo-mark { display: flex; align-items: center; gap: 6px; }
     .logo-kabp {
       color: var(--navy);
@@ -290,7 +291,7 @@
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--crimson);
+      color: var(--crimson-lt);
       margin-bottom: 1rem;
       opacity: 0;
       transform: translateY(12px);
@@ -311,7 +312,7 @@
     }
     .svh-headline em {
       font-style: normal;
-      color: var(--crimson);
+      color: var(--crimson-lt);
     }
     .svh-btn-row {
       position: absolute;
@@ -367,12 +368,14 @@
     .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
     .btn-fill { background: var(--crimson); color: #fff; border-color: transparent; }
     .btn-fill:hover { background: var(--crimson-dk); box-shadow: 0 6px 20px rgba(179,0,0,.22); }
-    .btn-wa { background: #25D366; color: #fff; border-color: transparent; }
-    .btn-wa:hover { background: #1da851; box-shadow: 0 6px 20px rgba(37,211,102,.25); }
+    .btn-wa { background: #15803D; color: #fff; border-color: transparent; }
+    .btn-wa:hover { background: #166534; box-shadow: 0 6px 20px rgba(21,128,61,.25); }
 
     @media (max-width: 600px) {
       #scroll-video-hero { height: 150vh; }
       .svh-sticky { height: 100svh; height: 100dvh; }
+      /* absolute bottom placement fell below the fold (sticky starts under the header) */
+      .svh-btn-row { position: relative; z-index: 2; bottom: auto; left: auto; transform: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       .svh-video { display: none; }
@@ -403,7 +406,7 @@
       padding: 6px 26px;
       white-space: nowrap;
     }
-    .ledger-item em { font-style: normal; color: var(--crimson); }
+    .ledger-item em { font-style: normal; color: var(--crimson-lt); }
     .ledger-item + .ledger-item::before {
       content: '';
       position: absolute;
@@ -861,7 +864,7 @@
       width: 52px;
       height: 52px;
       border-radius: 999px;
-      background: #25D366;
+      background: #15803D;
       color: #fff;
       box-shadow: var(--shadow-lg);
       transition: transform .2s;
@@ -1306,23 +1309,23 @@
     </div>
     <div class="journey">
       <figure class="journey-step">
-        <img src="assets/factory/factory-material.webp" width="1200" height="900" alt="Basins of grey and black PVC granules with colour-measuring cups beside a hydraulic press control panel" loading="lazy" />
+        <img src="assets/factory/factory-material.webp" srcset="assets/factory/factory-material-600.webp 600w, assets/factory/factory-material.webp 1200w" sizes="(max-width: 768px) 78vw, 260px" width="1200" height="900" alt="Basins of grey and black PVC granules with colour-measuring cups beside a hydraulic press control panel" loading="lazy" />
         <figcaption><span class="step-num">01</span><span class="step-name">Raw Material</span>PVC and EVA granules batched and colour-matched in-house before every run.</figcaption>
       </figure>
       <figure class="journey-step">
-        <img src="assets/factory/factory-moulding.webp" width="1200" height="900" alt="Freshly moulded grey and orange EVA soles laid out in front of two hydraulic press machines" loading="lazy" />
+        <img src="assets/factory/factory-moulding.webp" srcset="assets/factory/factory-moulding-600.webp 600w, assets/factory/factory-moulding.webp 1200w" sizes="(max-width: 768px) 78vw, 260px" width="1200" height="900" alt="Freshly moulded grey and orange EVA soles laid out in front of two hydraulic press machines" loading="lazy" />
         <figcaption><span class="step-num">02</span><span class="step-name">Moulding</span>Hydraulic presses mould soles and straps under controlled heat and pressure.</figcaption>
       </figure>
       <figure class="journey-step">
-        <img src="assets/factory/factory-finishing.webp" width="1200" height="900" alt="Workers trimming and pairing footwear at benches on the Arbuda Plastic factory floor" loading="lazy" />
+        <img src="assets/factory/factory-finishing.webp" srcset="assets/factory/factory-finishing-600.webp 600w, assets/factory/factory-finishing.webp 1200w" sizes="(max-width: 768px) 78vw, 260px" width="1200" height="900" alt="Workers trimming and pairing footwear at benches on the Arbuda Plastic factory floor" loading="lazy" />
         <figcaption><span class="step-num">03</span><span class="step-name">Finishing</span>Every pair is trimmed, assembled and checked by hand before it leaves the bench.</figcaption>
       </figure>
       <figure class="journey-step">
-        <img src="assets/factory/factory-dispatch.webp" width="900" height="1200" alt="Strapped cartons of finished footwear stacked at the factory dispatch bay" loading="lazy" />
+        <img src="assets/factory/factory-dispatch.webp" srcset="assets/factory/factory-dispatch-450.webp 450w, assets/factory/factory-dispatch.webp 900w" sizes="(max-width: 768px) 78vw, 260px" width="900" height="1200" alt="Strapped cartons of finished footwear stacked at the factory dispatch bay" loading="lazy" />
         <figcaption><span class="step-num">04</span><span class="step-name">Dispatch</span>Orders packed, strapped and dispatched to distributors across India.</figcaption>
       </figure>
       <figure class="journey-step journey-anchor">
-        <img src="assets/factory/factory-entrance.webp" width="900" height="1200" alt="Arbuda Plastic factory entrance with signboards showing the company name, GSTIN and address" loading="lazy" />
+        <img src="assets/factory/factory-entrance.webp" srcset="assets/factory/factory-entrance-450.webp 450w, assets/factory/factory-entrance.webp 900w" sizes="(max-width: 768px) 78vw, 260px" width="900" height="1200" alt="Arbuda Plastic factory entrance with signboards showing the company name, GSTIN and address" loading="lazy" />
         <figcaption><span class="step-name">Registered facility &middot; Sativali, Vasai East</span>Our GSTIN-registered unit at Meghdoot Signature, Waliv Phata. Factory visits welcome by appointment for wholesale buyers.</figcaption>
       </figure>
     </div>
@@ -1438,14 +1441,14 @@
   <div class="wrap find-us-inner">
     <h2>Find Us Online</h2>
     <div class="social-links">
-      <a href="https://www.indiamart.com/arbudaplastic/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on IndiaMART (opens in new tab)">
+      <a href="https://www.indiamart.com/arbudaplastic/" target="_blank" rel="noopener noreferrer" class="social-link">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="2" y="2" width="20" height="20" rx="3" fill="#FF6B35"/>
           <text x="12" y="16.5" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">IM</text>
         </svg>
         IndiaMART
       </a>
-      <a href="https://www.facebook.com/p/Arbuda-Plastic-100095175631277/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Arbuda Plastic on Facebook (opens in new tab)">
+      <a href="https://www.facebook.com/p/Arbuda-Plastic-100095175631277/" target="_blank" rel="noopener noreferrer" class="social-link">
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/>
         </svg>
@@ -1481,6 +1484,6 @@
 <!-- ============================================================
      SCRIPTS
 ============================================================ -->
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

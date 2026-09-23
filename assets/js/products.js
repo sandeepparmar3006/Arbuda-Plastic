@@ -207,7 +207,7 @@
     buildGallery();
 
     backdrop.classList.add('open');
-    backdrop.setAttribute('aria-hidden', 'false');
+    backdrop.inert = false;
     document.body.style.overflow = 'hidden';
     setTimeout(function () { modalClose.focus(); }, 60);
   }
@@ -271,7 +271,7 @@
   /* close modal */
   function closeModal() {
     backdrop.classList.remove('open');
-    backdrop.setAttribute('aria-hidden', 'true');
+    backdrop.inert = true;
     document.body.style.overflow = '';
     activeProduct = null;
   }
