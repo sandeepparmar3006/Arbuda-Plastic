@@ -40,11 +40,10 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
   <style>
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/inter-latin-var.woff2) format('woff2'); }
-    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); }
-    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); }
+    @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 500 800; font-display: swap; src: url(assets/fonts/archivo-latin-var.woff2) format('woff2'); }
   </style>
 
   <!-- JSON-LD Structured Data -->
@@ -105,7 +104,7 @@
       --text:       #1A1A2E;
       --amber:      #D97706;
 
-      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
       --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
       --r-sm: 12px;
@@ -307,11 +306,11 @@
     }
     .svh-headline {
       font-family: var(--font-display);
-      font-weight: 400;
-      font-style: italic;
-      font-size: clamp(3rem, 8vw, 5.8rem);
-      line-height: 1.02;
-      letter-spacing: -.01em;
+      font-weight: 700;
+      font-style: normal;
+      font-size: clamp(2.5rem, 6vw, 4.25rem);
+      line-height: 1.05;
+      letter-spacing: -.015em;
       color: #F7F7F5;
       text-wrap: balance;
       opacity: 0;
@@ -442,11 +441,11 @@
     }
     h2 {
       font-family: var(--font-display);
-      font-weight: 400;
-      font-style: italic;
+      font-weight: 700;
+      font-style: normal;
       font-size: clamp(2rem, 4vw, 3rem);
       color: var(--navy);
-      letter-spacing: -.01em;
+      letter-spacing: -.015em;
       line-height: 1.1;
       margin-bottom: 18px;
       text-wrap: balance;
@@ -467,109 +466,95 @@
     .band-head h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
     .band-head p { color: var(--muted); font-size: 14px; margin: 0; }
 
-    /* Marquee viewport */
-    .band-viewport {
-      overflow-x: auto;
-      overflow-y: hidden;
+    .range-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+    }
+    .range-tile {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 16px;
+      padding: 24px;
       border-radius: var(--r-lg);
-      background: rgba(255,255,255,.9);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      cursor: grab;
-    }
-    .band-viewport::-webkit-scrollbar { display: none; }
-    .band-viewport.is-dragging { cursor: grabbing; user-select: none; }
-
-    .band-track {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 28px 24px;
-      width: max-content;
-    }
-
-    .product-card {
-      flex: 0 0 auto;
-      width: 210px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      padding: 20px 16px;
-      border-radius: var(--r-md);
       background: var(--surface);
       border: 1px solid var(--border);
-      transition: transform .2s, box-shadow .2s;
-      text-align: center;
-    }
-    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-    .product-card img {
-      width: 150px;
-      height: 150px;
-      border-radius: var(--r-sm);
-      object-fit: contain;
-      background: transparent;
-    }
-    .product-card .name {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-weight: 400;
-      font-size: 22px;
       color: var(--navy);
-      margin: 0;
-      line-height: 1.1;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
     }
-    /* Card meta: mono material chip + real SKU index */
-    .card-meta {
+    .range-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(0,0,51,.18); }
+    .range-tile:active { transform: translateY(-1px); }
+    .range-tile:focus-visible { outline: 3px solid var(--crimson); outline-offset: 3px; }
+    .range-tile--lead { grid-row: span 2; }
+    .range-tile img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+    .range-tile--lead img { max-height: 340px; }
+    .range-tile:not(.range-tile--lead) img { max-height: 150px; }
+    .range-text { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .range-name { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 1.9rem); letter-spacing: -.015em; line-height: 1.1; }
+    .range-meta { font-size: 14px; color: var(--muted); }
+    .range-go { font-size: 14px; font-weight: 600; color: var(--crimson); }
+
+    /* ============================================================
+       WORKING WITH US (carton label)
+    ============================================================ */
+    .ordering { padding: 80px 0; }
+    .ordering .lede { color: var(--muted); max-width: 60ch; font-size: 15px; margin-top: 8px; }
+    .carton {
+      margin-top: 32px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: var(--r-lg);
+      padding: 12px;
+    }
+    .carton-inner {
+      border: 1.5px solid rgba(255,255,255,.28);
+      border-radius: var(--r-sm);
+    }
+    .carton-head {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      font-family: var(--font-mono);
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 16px 24px;
+      border-bottom: 1.5px solid rgba(255,255,255,.28);
     }
-    .card-meta .mat {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .12em;
-      padding: 2px 7px;
-      border-radius: 4px;
-      line-height: 1.4;
-    }
-    .card-meta .mat-pvc { color: var(--crimson); background: rgba(179,0,0,.08); }
-    .card-meta .mat-eva { color: var(--muted); background: rgba(0,0,51,.05); }
-    .card-meta .sku-idx {
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: .08em;
-      color: var(--muted);
-    }
-    .card-enquire {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      width: 100%;
-      border-radius: 999px;
-      border: 1.5px solid rgba(179,0,0,.3);
-      color: var(--crimson);
+    .carton-brand { font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; }
+    .carton-tag {
+      background: var(--crimson);
+      color: #fff;
       font-size: 13px;
       font-weight: 600;
-      transition: background .2s, color .2s;
+      padding: 8px 16px;
+      border-radius: 999px;
     }
-    .card-enquire:hover { background: var(--crimson); color: #fff; }
+    .carton-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .carton-cell { padding: 24px; border-bottom: 1px solid rgba(255,255,255,.16); }
+    .carton-cell:not(:nth-child(3n)) { border-right: 1px solid rgba(255,255,255,.16); }
+    .carton-cell dt { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.72); }
+    .carton-value { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.4rem, 2.4vw, 1.75rem); letter-spacing: -.01em; line-height: 1.15; margin-top: 8px; }
+    .carton-note { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.8); margin-top: 8px; }
+    .carton-steps {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      counter-reset: step;
+    }
+    .carton-steps li { counter-increment: step; padding: 16px 24px; font-size: 14px; line-height: 1.5; color: rgba(255,255,255,.8); }
+    .carton-steps li + li { border-left: 1px solid rgba(255,255,255,.16); }
+    .carton-steps strong { display: block; color: #fff; font-weight: 600; font-size: 15px; }
+    .carton-steps strong::before { content: counter(step) ". "; color: var(--crimson-lt); }
 
-    /* hide raw origin text once JS builds the meta row; fallback if JS off */
-    .product-card .sku-origin {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 400;
-      color: var(--muted);
-      letter-spacing: .08em;
-      text-transform: uppercase;
+    @media (max-width: 768px) {
+      .range-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+      .range-tile--lead { grid-row: auto; }
+      .range-tile--lead img, .range-tile:not(.range-tile--lead) img { max-height: 180px; }
+      .carton-grid, .carton-steps { grid-template-columns: 1fr; }
+      .carton-cell:not(:nth-child(3n)) { border-right: none; }
+      .carton-steps li + li { border-left: none; border-top: 1px solid rgba(255,255,255,.16); }
+      .carton-cell, .carton-steps li, .carton-head { padding-left: 16px; padding-right: 16px; }
     }
 
     /* ============================================================
@@ -598,8 +583,8 @@
     .journey-head { margin-top: 64px; }
     .journey-head h3 {
       font-family: var(--font-display);
-      font-style: italic;
-      font-weight: 400;
+      font-style: normal;
+      font-weight: 700;
       font-size: clamp(1.5rem, 3.5vw, 2rem);
       color: var(--navy);
       margin-bottom: 8px;
@@ -618,8 +603,8 @@
     .journey-step figcaption { padding: 16px; font-size: 13px; color: var(--muted); line-height: 1.6; }
     .step-num {
       display: block;
-      font-family: var(--font-display);
-      font-style: italic;
+      font-family: var(--font-display); font-weight: 700;
+      font-style: normal;
       font-size: 1.4rem;
       color: var(--crimson);
       line-height: 1;
@@ -671,8 +656,8 @@
     }
     .policy-value {
       font-family: var(--font-display);
-      font-weight: 400;
-      font-style: italic;
+      font-weight: 700;
+      font-style: normal;
       font-size: 1.6rem;
       color: var(--navy);
       line-height: 1.1;
@@ -743,11 +728,11 @@
     }
     .cta-band h3 {
       font-family: var(--font-display);
-      font-weight: 400;
-      font-style: italic;
+      font-weight: 700;
+      font-style: normal;
       font-size: clamp(1.6rem, 3vw, 2.2rem);
       color: #fff;
-      letter-spacing: -.01em;
+      letter-spacing: -.015em;
       margin-bottom: 6px;
     }
     .cta-band p { color: rgba(255,255,255,.65); font-size: 15px; }
@@ -855,8 +840,6 @@
       .nav-links a { display: block; padding: 12px 8px; border-bottom: 1px solid var(--border); border-radius: 0; }
       .nav-links a:last-child { border-bottom: none; }
       .nav-cta { margin-top: 6px; justify-content: center; border-radius: var(--r-sm); }
-      .product-card { width: 175px; }
-      .product-card img { width: 120px; height: 120px; }
     }
 
     /* ============================================================
@@ -938,6 +921,7 @@
     <div class="nav-links" id="mobileNav" role="navigation" aria-label="Main navigation">
       <a href="products.html">Products</a>
       <a href="arbuda-catalogue.pdf" target="_blank" rel="noopener noreferrer">Catalogue</a>
+      <a href="#working-with-us">How We Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a href="tel:+919821351511" class="nav-cta">
@@ -1015,301 +999,24 @@
       <div>
         <div class="section-label">Product Range</div>
         <h2>40+ Styles</h2>
-        <p>All SKUs from our Vasai East factory.</p>
+        <p>Slippers, sandals and school shoes in PVC and EVA, made at our Vasai East factory.</p>
       </div>
       <a href="products.html" class="nav-cta">View All Products</a>
     </div>
 
-  </div>
-
-  <div style="width:min(1080px,calc(100% - 40px));margin:0 auto">
-    <div class="band-viewport" id="bandViewport" role="region" aria-label="Scrollable product showcase. Auto-scrolls; hover to pause; drag or scroll to browse.">
-      <div class="band-track" id="bandTrack">
-
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Abibas.webp" alt="Abibas slipper by Arbuda Plastic" />
-        <p class="name">Abibas</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Abibas%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Abibas on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Air.webp" alt="Air slipper by Arbuda Plastic" />
-        <p class="name">Air</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Air%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Air on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Anita.webp" alt="Anita slipper by Arbuda Plastic" />
-        <p class="name">Anita</p>
-        <p class="sku-origin">Vasai · PVC</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Anita%20%28PVC%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Anita on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Annu.webp" alt="Annu slipper by Arbuda Plastic" />
-        <p class="name">Annu</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Annu%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Annu on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Apple.webp" alt="Apple slipper by Arbuda Plastic" />
-        <p class="name">Apple</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Apple%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Apple on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/DP-0131.webp" alt="DP 0131 slipper by Arbuda Plastic" />
-        <p class="name">DP 0131</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20DP%200131%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about DP 0131 on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/DP-School-Shoes1.webp" alt="DP School Shoes style 1 by Arbuda Plastic" />
-        <p class="name">DP School Shoes</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20DP%20School%20Shoes%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about DP School Shoes on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/DP-School-Shoes2.webp" alt="DP School Shoes style 2 by Arbuda Plastic" />
-        <p class="name">DP School Shoes</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20DP%20School%20Shoes%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about DP School Shoes on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/DP-School-Shoes3.webp" alt="DP School Shoes style 3 by Arbuda Plastic" />
-        <p class="name">DP School Shoes</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20DP%20School%20Shoes%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about DP School Shoes on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/DP-1101.webp" alt="DP 1101 slipper by Arbuda Plastic" />
-        <p class="name">DP 1101</p>
-        <p class="sku-origin">Vasai · PVC</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20DP%201101%20%28PVC%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about DP 1101 on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/DP-1102.webp" alt="DP 1102 slipper by Arbuda Plastic" />
-        <p class="name">DP 1102</p>
-        <p class="sku-origin">Vasai · PVC</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20DP%201102%20%28PVC%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about DP 1102 on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Dr-Hi-Fi-Choice.webp" alt="Dr Hi Fi Choice slipper by Arbuda Plastic" />
-        <p class="name">Dr Hi Fi Choice</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Dr%20Hi%20Fi%20Choice%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Dr Hi Fi Choice on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Dr-rani.webp" alt="Dr Rani slipper by Arbuda Plastic" />
-        <p class="name">Dr Rani</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Dr%20Rani%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Dr Rani on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Dr-Tanvi.webp" alt="Dr Tanvi women's slipper by Arbuda Plastic" />
-        <p class="name">Dr Tanvi</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Dr%20Tanvi%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Dr Tanvi on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Duster.webp" alt="Duster slipper by Arbuda Plastic" />
-        <p class="name">Duster</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Duster%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Duster on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Express.webp" alt="Express slipper by Arbuda Plastic" />
-        <p class="name">Express</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Express%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Express on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/F-16.webp" alt="F-16 slipper by Arbuda Plastic" />
-        <p class="name">F-16</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20F-16%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about F-16 on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/F-35.webp" alt="F-35 slipper by Arbuda Plastic" />
-        <p class="name">F-35</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20F-35%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about F-35 on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Fastar.webp" alt="Fastar slipper by Arbuda Plastic" />
-        <p class="name">Fastar</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Fastar%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Fastar on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Hi-Kitty.webp" alt="Hi-Kitty slipper by Arbuda Plastic" />
-        <p class="name">Hi-Kitty</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Hi-Kitty%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Hi-Kitty on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Honey-Rose.webp" alt="Honey Rose slipper by Arbuda Plastic" />
-        <p class="name">Honey Rose</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Honey%20Rose%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Honey Rose on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Jyoti.webp" alt="Jyoti slipper by Arbuda Plastic" />
-        <p class="name">Jyoti</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Jyoti%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Jyoti on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Karishma.webp" alt="Karishma slipper by Arbuda Plastic" />
-        <p class="name">Karishma</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Karishma%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Karishma on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Kartik.webp" alt="Kartik slipper by Arbuda Plastic" />
-        <p class="name">Kartik</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Kartik%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Kartik on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Kavya.webp" alt="Kavya slipper by Arbuda Plastic" />
-        <p class="name">Kavya</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Kavya%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Kavya on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Kinjal.webp" alt="Kinjal slipper by Arbuda Plastic" />
-        <p class="name">Kinjal</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Kinjal%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Kinjal on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Ladli.webp" alt="Ladli slipper by Arbuda Plastic" />
-        <p class="name">Ladli</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Ladli%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Ladli on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Manshi.webp" alt="Manshi slipper by Arbuda Plastic" />
-        <p class="name">Manshi</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Manshi%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Manshi on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/NY-Luxury.webp" alt="NY and Luxury slipper by Arbuda Plastic" />
-        <p class="name">NY &amp; Luxury</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20NY%20%26%20Luxury%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about NY &amp; Luxury on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Pal-Pal.webp" alt="Pal Pal slipper by Arbuda Plastic" />
-        <p class="name">Pal Pal</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Pal%20Pal%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Pal Pal on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Rock.webp" alt="Rock slipper by Arbuda Plastic" />
-        <p class="name">Rock</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Rock%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Rock on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Rocket.webp" alt="Rocket slipper by Arbuda Plastic" />
-        <p class="name">Rocket</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Rocket%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Rocket on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Roma.webp" alt="Roma Sandal by Arbuda Plastic" />
-        <p class="name">Roma Sandal</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Roma%20Sandal%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Roma Sandal on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Ruchi.webp" alt="Ruchi slipper by Arbuda Plastic" />
-        <p class="name">Ruchi</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Ruchi%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Ruchi on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Runstar.webp" alt="Runstar men's slipper by Arbuda Plastic" />
-        <p class="name">Runstar</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Runstar%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Runstar on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Safar.webp" alt="Safar slipper by Arbuda Plastic" />
-        <p class="name">Safar</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Safar%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Safar on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Samrat.webp" alt="Samrat men's slipper by Arbuda Plastic" />
-        <p class="name">Samrat</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Samrat%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Samrat on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Sangita.webp" alt="Sangita slipper by Arbuda Plastic" />
-        <p class="name">Sangita</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Sangita%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Sangita on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/School-King.webp" alt="School King Sandal by Arbuda Plastic" />
-        <p class="name">School King Sandal</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20School%20King%20Sandal%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about School King Sandal on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Shilpa.webp" alt="Shilpa slipper by Arbuda Plastic" />
-        <p class="name">Shilpa</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Shilpa%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Shilpa on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Simpy.webp" alt="Simpy slipper by Arbuda Plastic" />
-        <p class="name">Simpy</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Simpy%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Simpy on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Storm.webp" alt="Storm slipper by Arbuda Plastic" />
-        <p class="name">Storm</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Storm%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Storm on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Sujata.webp" alt="Sujata slipper by Arbuda Plastic" />
-        <p class="name">Sujata</p>
-        <p class="sku-origin">Vasai · PVC</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Sujata%20%28PVC%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Sujata on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Tarzan.webp" alt="Tarzan slipper by Arbuda Plastic" />
-        <p class="name">Tarzan</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Tarzan%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Tarzan on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Toofan.webp" alt="Toofan slipper by Arbuda Plastic" />
-        <p class="name">Toofan</p>
-        <p class="sku-origin">Vasai · PVC</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Toofan%20%28PVC%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Toofan on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Urban-King.webp" alt="Urban King men's slipper by Arbuda Plastic" />
-        <p class="name">Urban King</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Urban%20King%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Urban King on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-      <div class="product-card">
-        <img loading="lazy" decoding="async" width="160" height="160" src="Products/Young-Lady.webp" alt="Young Lady slipper by Arbuda Plastic" />
-        <p class="name">Young Lady</p>
-        <p class="sku-origin">Vasai · EVA</p>
-        <a class="card-enquire" href="https://wa.me/919821351511?text=Hi%2C%20I%27m%20interested%20in%20a%20bulk%20order%20of%20Young%20Lady%20%28EVA%29." target="_blank" rel="noopener noreferrer" aria-label="Enquire about Young Lady on WhatsApp (opens in new tab)">Enquire</a>
-      </div>
-
-      </div>
+    <div class="range-grid">
+      <a class="range-tile range-tile--lead" href="products.html?filter=men">
+        <img loading="lazy" decoding="async" src="Products/Runstar.webp" width="520" height="245" alt="Runstar men's slipper" />
+        <span class="range-text"><span class="range-name">Men's</span><span class="range-go">View range</span></span>
+      </a>
+      <a class="range-tile" href="products.html?filter=women">
+        <img loading="lazy" decoding="async" src="Products/Simpy.webp" width="520" height="379" alt="Simpy women's slipper" />
+        <span class="range-text"><span class="range-name">Women's</span><span class="range-go">View range</span></span>
+      </a>
+      <a class="range-tile" href="products.html?filter=school-shoe">
+        <img loading="lazy" decoding="async" src="Products/School-King.webp" width="520" height="395" alt="School King sandal" />
+        <span class="range-text"><span class="range-name">School</span><span class="range-go">View range</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -1322,7 +1029,7 @@
 <section class="about" id="about">
   <div class="wrap">
     <h2>Who we are.</h2>
-    <p style="color:var(--muted);max-width:68ch;font-size:15px">Arbuda Plastic has manufactured PVC and EVA footwear at our Vasai East factory since 2014. Every pair is produced under our own KABP brand — we are not a contract or private-label manufacturer. Over a decade supplying wholesale distributors and bulk buyers across India.</p>
+    <p style="color:var(--muted);max-width:68ch;font-size:15px">Arbuda Plastic has manufactured PVC and EVA footwear at our Vasai East factory since 2014. Every pair is produced under our own KABP brand. We are not a contract or private-label manufacturer. Over a decade supplying wholesale distributors and bulk buyers across India.</p>
 
     <div class="journey-head">
       <h3>From granule to dispatch.</h3>
@@ -1355,7 +1062,7 @@
 
       <div class="card">
         <h3>What we make</h3>
-        <p>PVC and EVA footwear — slippers, sandals, and school shoes — produced at our Sativali, Vasai facility with quality checks at every production stage. 40+ active styles for wholesale buyers.</p>
+        <p>PVC and EVA slippers, sandals and school shoes, produced at our Sativali, Vasai facility with quality checks at every production stage. 40+ active styles for wholesale buyers.</p>
       </div>
 
       <div class="card">
@@ -1368,31 +1075,41 @@
         </ul>
       </div>
 
-      <!-- Return & Exchange Policy -->
-      <div class="card card-policy">
-        <div class="policy-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="1 4 1 10 7 10"></polyline>
-            <path d="M3.51 15a9 9 0 1 0 .49-3.51"></path>
-          </svg>
-        </div>
-        <p class="policy-label">Return &amp; Exchange Policy</p>
-        <p class="policy-value">7-Day Returns</p>
-        <p class="policy-desc">Defective or incorrectly shipped goods returned or exchanged within 7 days of delivery. No questions on manufacturing defects.</p>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Warranty -->
-      <div class="card card-policy">
-        <div class="policy-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--crimson)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-        </div>
-        <p class="policy-label">Manufacturer's Warranty</p>
-        <p class="policy-value">6-Month Warranty</p>
-        <p class="policy-desc">Every product carries a 6-month warranty against material and workmanship defects. Covered as standard on all wholesale orders.</p>
-      </div>
+<hr class="divider" />
 
+<!-- ============================================================
+     WORKING WITH US
+============================================================ -->
+<section class="ordering" id="working-with-us">
+  <div class="wrap">
+    <h2>Working with us.</h2>
+    <p class="lede">New wholesale buyers are welcome. This is what to expect when you order from us.</p>
+
+    <div class="carton">
+      <div class="carton-inner">
+        <div class="carton-head">
+          <span class="carton-brand">KABP Arbuda Plastic</span>
+          <span class="carton-tag">First order? Start with one carton.</span>
+        </div>
+        <dl class="carton-grid">
+          <div class="carton-cell"><dt>Minimum order</dt><dd class="carton-value">1 carton</dd><dd class="carton-note">60 to 178 pairs, depending on product and size.</dd></div>
+          <div class="carton-cell"><dt>Dispatch</dt><dd class="carton-value">Next day</dd><dd class="carton-note">Or as soon as stock is ready.</dd></div>
+          <div class="carton-cell"><dt>Samples</dt><dd class="carton-value">Adjusted on order</dd><dd class="carton-note">Sample cost is adjusted against your first order.</dd></div>
+          <div class="carton-cell"><dt>Payment</dt><dd class="carton-value">Agreed upfront</dd><dd class="carton-note">Terms are fixed before dispatch. We keep to our dispatch dates and expect payment on the agreed date.</dd></div>
+          <div class="carton-cell"><dt>Returns</dt><dd class="carton-value">7 days</dd><dd class="carton-note">Defective or wrongly shipped goods returned or exchanged within 7 days of delivery.</dd></div>
+          <div class="carton-cell"><dt>Warranty</dt><dd class="carton-value">6 months</dd><dd class="carton-note">Against material and workmanship defects, on every wholesale order.</dd></div>
+        </dl>
+        <ol class="carton-steps" aria-label="How to order">
+          <li><strong>Send your requirement</strong>Styles, sizes and quantity, on WhatsApp or phone.</li>
+          <li><strong>Get a quote</strong>Prices for your order and sizes.</li>
+          <li><strong>Confirm order and terms</strong>Quantities, dispatch date and payment terms.</li>
+          <li><strong>Dispatch</strong>Packed in cartons and sent from our factory.</li>
+        </ol>
+      </div>
     </div>
   </div>
 </section>
@@ -1405,7 +1122,7 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Get in touch.</h2>
-    <p style="color:var(--muted);font-size:15px">Reach us directly for wholesale enquiries, bulk orders and business coordination.</p>
+    <p style="color:var(--muted);font-size:15px">Reach us directly for wholesale enquiries and bulk orders. Factory visits are welcome by appointment.</p>
 
     <div class="contact-grid">
       <div class="contact-card">
@@ -1435,7 +1152,7 @@
     <div class="cta-band">
       <div>
         <h3>Ready to place a bulk order?</h3>
-        <p>Call us or message on WhatsApp — we respond fast.</p>
+        <p>Call us or message on WhatsApp. We respond fast.</p>
       </div>
       <div class="cta-actions">
         <a class="btn btn-light" href="tel:+919821351511">

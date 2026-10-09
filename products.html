@@ -50,11 +50,10 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
   <style>
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/inter-latin-var.woff2) format('woff2'); }
-    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); }
-    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); }
+    @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 500 800; font-display: swap; src: url(assets/fonts/archivo-latin-var.woff2) format('woff2'); }
   </style>
 
   <style>
@@ -67,7 +66,7 @@
       --border:     rgba(0,0,51,.09);
       --muted:      #5E6B80;
       --text:       #1A1A2E;
-      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
       --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
       --r-sm: 12px; --r-md: 18px; --r-lg: 24px;
       --shadow-sm: 0 2px 8px rgba(0,0,51,.05);
@@ -114,7 +113,7 @@
 
     /* page header */
     .page-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); }
-    .page-header h1 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); color: var(--navy); line-height: 1.15; margin-bottom: 8px; }
+    .page-header h1 { font-family: var(--font-display); font-style: normal; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: var(--navy); line-height: 1.15; margin-bottom: 8px; }
     .page-header p { font-size: 15px; color: var(--muted); }
 
     /* filter bar */
@@ -174,7 +173,7 @@
     .modal-close-row { display: flex; justify-content: flex-end; margin-bottom: 16px; }
     .modal-close { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); color: var(--muted); display: flex; align-items: center; justify-content: center; transition: background .15s, color .15s; }
     .modal-close:hover { background: var(--text); color: #fff; }
-    .modal-name { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.65rem; color: var(--navy); line-height: 1.2; margin-bottom: 12px; }
+    .modal-name { font-family: var(--font-display); font-style: normal; font-weight: 700; font-size: 1.65rem; color: var(--navy); line-height: 1.2; margin-bottom: 12px; }
     .modal-badge { margin-bottom: 24px; }
     .modal-badge .badge { font-size: 11px; padding: 4px 12px; }
     .detail-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }

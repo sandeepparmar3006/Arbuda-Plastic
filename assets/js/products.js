@@ -171,6 +171,11 @@
     });
   });
 
+  var qFilter = new URLSearchParams(location.search).get('filter');
+  Array.prototype.forEach.call(filterBtns, function (b) {
+    if (qFilter && b.dataset.filter === qFilter) b.click();
+  });
+
   /* open modal */
   function openModal(p) {
     activeProduct = p;
