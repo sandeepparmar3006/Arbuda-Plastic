@@ -158,14 +158,12 @@
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Typeset each card as a catalog entry: mono material chip + real SKU index */
+  /* Typeset each card as a catalog entry: mono material chip + sizes */
   var originals = Array.prototype.slice.call(track.children);
-  var total = originals.length;
-  originals.forEach(function (card, i) {
+  originals.forEach(function (card) {
     var origin = card.querySelector('.sku-origin');
     if (!origin) return;
     var isPvc = /PVC/i.test(origin.textContent);
-    var idx = String(i + 1).padStart(2, '0') + ' / ' + total;
     var meta = document.createElement('div');
     meta.className = 'card-meta';
     var matSpan = document.createElement('span');
@@ -173,7 +171,8 @@
     matSpan.textContent = isPvc ? 'PVC' : 'EVA';
     var idxSpan = document.createElement('span');
     idxSpan.className = 'sku-idx';
-    idxSpan.textContent = idx;
+    var sz = (card.dataset.sizes || '').split(', ');
+    idxSpan.textContent = sz.slice(0, 3).join(', ') + (sz.length > 3 ? ' +' + (sz.length - 3) : '');
     meta.appendChild(matSpan);
     meta.appendChild(idxSpan);
     origin.replaceWith(meta);

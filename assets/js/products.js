@@ -38,6 +38,7 @@
   /* state */
   var allProducts   = [];
   var activeFilter  = 'all';
+  var activeSize    = 'all';
   var activeProduct = null;
   var activePhoto   = 0;
 
@@ -104,9 +105,10 @@
     var visible = 0;
 
     allProducts.forEach(function (p, idx) {
-      var show = activeFilter === 'all' ||
-                 p.material === activeFilter ||
-                 (p.type && p.type.indexOf(activeFilter) !== -1);
+      var show = (activeFilter === 'all' ||
+                  p.material === activeFilter ||
+                  (p.type && p.type.indexOf(activeFilter) !== -1)) &&
+                 (activeSize === 'all' || (p.sizes && p.sizes.indexOf(activeSize) !== -1));
       var card = document.createElement('div');
       card.className = 'product-card';
       card.setAttribute('role', 'listitem');
@@ -177,6 +179,26 @@
       });
       renderGrid();
     });
+  });
+
+  /* size filter: options from the data, sorted by first then second number */
+  var sizeSelect = document.getElementById('sizeFilter');
+  var sizeList = [];
+  allProducts.forEach(function (pr) {
+    (pr.sizes || []).forEach(function (z) { if (sizeList.indexOf(z) === -1) sizeList.push(z); });
+  });
+  sizeList.sort(function (a, b) {
+    var x = a.split('x').map(Number), y = b.split('x').map(Number);
+    return x[0] - y[0] || x[1] - y[1];
+  });
+  sizeList.forEach(function (z) {
+    var opt = document.createElement('option');
+    opt.value = opt.textContent = z;
+    sizeSelect.appendChild(opt);
+  });
+  sizeSelect.addEventListener('change', function () {
+    activeSize = sizeSelect.value;
+    renderGrid();
   });
 
   var qFilter = new URLSearchParams(location.search).get('filter');
