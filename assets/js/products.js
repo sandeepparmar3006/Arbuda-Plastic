@@ -54,6 +54,8 @@
   var modalBadge    = document.getElementById('modalBadge');
   var modalSizes    = document.getElementById('modalSizes');
   var modalCount    = document.getElementById('modalPhotoCount');
+  var modalColours  = document.getElementById('modalColours');
+  var modalColoursLabel = document.getElementById('modalColoursLabel');
   var modalWA       = document.getElementById('modalWhatsApp');
   var modalClose    = document.getElementById('modalClose');
 
@@ -139,6 +141,12 @@
         sz.textContent = p.sizes.slice(0, 3).join(', ') + (p.sizes.length > 3 ? '...' : '');
         meta.appendChild(sz);
       }
+      if (p.colours && p.colours.length > 1) {
+        var col = document.createElement('span');
+        col.className = 'card-colours';
+        col.textContent = p.colours.length + ' colours';
+        meta.appendChild(col);
+      }
       body.appendChild(nameEl);
       body.appendChild(meta);
       card.appendChild(thumb);
@@ -202,6 +210,16 @@
       noSz.textContent = 'Contact us for size availability.';
       modalSizes.appendChild(noSz);
     }
+
+    modalColours.innerHTML = '';
+    var hasColours = !!(p.colours && p.colours.length);
+    modalColours.hidden = modalColoursLabel.hidden = !hasColours;
+    (p.colours || []).forEach(function (c) {
+      var chip = document.createElement('span');
+      chip.className = 'size-chip colour-chip';
+      chip.textContent = c;
+      modalColours.appendChild(chip);
+    });
 
     var n = (p.photos && p.photos.length) ? p.photos.length : 0;
     modalCount.textContent = n ? n + ' photo' + (n !== 1 ? 's' : '') : '';
