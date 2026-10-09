@@ -641,6 +641,8 @@
     .carton-cell:not(:nth-child(3n)) { border-right: 1px solid rgba(255,255,255,.16); }
     .carton-cell dt { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.72); }
     .carton-value { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.4rem, 2.4vw, 1.75rem); letter-spacing: -.01em; line-height: 1.15; margin-top: 8px; }
+    .carton-value a { color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+    .carton-value a:hover { color: var(--crimson-lt); }
     .carton-note { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.8); margin-top: 8px; }
     .carton-steps {
       list-style: none;
@@ -1495,7 +1497,7 @@
           <span class="carton-tag">Small first orders welcome.</span>
         </div>
         <dl class="carton-grid">
-          <div class="carton-cell"><dt>Minimum order</dt><dd class="carton-value">From 1 carton</dd><dd class="carton-note">Varies by product, size and delivery distance. One carton holds 60 to 178 pairs.</dd></div>
+          <div class="carton-cell"><dt>Minimum order</dt><dd class="carton-value"><a href="#contact">Contact us</a></dd><dd class="carton-note">Varies by product and location. Call or WhatsApp us with your requirement.</dd></div>
           <div class="carton-cell"><dt>Dispatch</dt><dd class="carton-value">Next day</dd><dd class="carton-note">Or as soon as stock is ready.</dd></div>
           <div class="carton-cell"><dt>Samples</dt><dd class="carton-value">Adjusted on order</dd><dd class="carton-note">Sample cost is adjusted against your first order.</dd></div>
           <div class="carton-cell"><dt>Payment</dt><dd class="carton-value">Agreed upfront</dd><dd class="carton-note">Terms are fixed before dispatch. We keep to our dispatch dates and expect payment on the agreed date.</dd></div>
@@ -1605,7 +1607,7 @@
     <span>KABP&reg; Arbuda Plastic &middot; Vasai, Maharashtra</span>
     <div class="foot-legal">
       <span>PVC &amp; EVA Footwear Manufacturer</span>
-      <span>MOQ: from 1 carton (60-178 pairs), varies by product, size and distance</span>
+      <span>MOQ: varies by product and location, contact us</span>
       <span>GSTIN: 27AGUPP3374Q1Z8</span>
       <span>&copy; <span id="footYear"></span></span>
     </div>
