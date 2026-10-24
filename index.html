@@ -38,6 +38,88 @@
 
   <link rel="canonical" href="https://www.arbudaplastic.co.in/" />
 
+  <!-- JSON-LD: FAQ (must match the visible #faq section word for word) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is your minimum order quantity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It varies by product and delivery location. One carton holds 60 to 178 pairs, depending on product and size. Small first orders are welcome. Send your styles, sizes and quantity on WhatsApp for a quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you deliver outside Maharashtra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We dispatch to wholesale buyers across India. Orders are packed in cartons and sent from our Vasai East factory, with delivery within 7 working days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you export outside India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We currently supply buyers within India only."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between PVC and EVA footwear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EVA is a lightweight, cushioned foam, suited to everyday slippers and sandals worn for long hours. PVC is denser and more water-resistant, suited to hard-wearing slippers and school shoes. We make 39 EVA and 6 PVC styles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your payment terms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Payment is received in advance, then the order is dispatched, usually the next day. Where credit is agreed in writing, the maximum period is 45 days as per the MSMED Act, 2006."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you manufacture for other brands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Every pair is made and sold under our own KABP brand. We are not a contract or private-label manufacturer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get samples before ordering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The sample cost is adjusted against your first order."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if goods arrive defective?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Defective or incorrectly shipped goods can be returned or exchanged within 7 days of delivery. Every product also carries a 6-month warranty against material and workmanship defects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I visit the factory?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, by appointment for wholesale buyers. Our factory is at Meghdoot Signature, Waliv Phata, Sativali, Vasai East."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -615,6 +697,31 @@
     ============================================================ */
     .ordering { padding: 80px 0; }
     .ordering .lede { color: var(--muted); max-width: 60ch; font-size: 15px; margin-top: 8px; }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq { padding: 64px 0; }
+    .faq-list { margin-top: 24px; max-width: 820px; border-top: 1px solid var(--border); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--navy);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; flex: none; font-size: 24px; line-height: 1; color: var(--crimson); }
+    .faq-item[open] summary::after { content: "\2212"; }
+    .faq-item summary:hover { color: var(--crimson-dk); }
+    .faq-item p { color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 68ch; padding: 0 0 16px; }
     .carton {
       margin-top: 32px;
       background: var(--navy);
@@ -1519,6 +1626,55 @@
           <li><strong>Dispatch</strong>Packed in cartons and sent from our factory.</li>
         </ol>
       </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     FAQ
+============================================================ -->
+<section class="faq" id="faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <h2 id="faq-heading">Questions buyers ask.</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is your minimum order quantity?</summary>
+        <p>It varies by product and delivery location. One carton holds 60 to 178 pairs, depending on product and size. Small first orders are welcome. Send your styles, sizes and quantity on WhatsApp for a quote.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you deliver outside Maharashtra?</summary>
+        <p>Yes. We dispatch to wholesale buyers across India. Orders are packed in cartons and sent from our Vasai East factory, with delivery within 7 working days.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you export outside India?</summary>
+        <p>No. We currently supply buyers within India only.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the difference between PVC and EVA footwear?</summary>
+        <p>EVA is a lightweight, cushioned foam, suited to everyday slippers and sandals worn for long hours. PVC is denser and more water-resistant, suited to hard-wearing slippers and school shoes. We make 39 EVA and 6 PVC styles.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What are your payment terms?</summary>
+        <p>Payment is received in advance, then the order is dispatched, usually the next day. Where credit is agreed in writing, the maximum period is 45 days as per the MSMED Act, 2006.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you manufacture for other brands?</summary>
+        <p>No. Every pair is made and sold under our own KABP brand. We are not a contract or private-label manufacturer.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I get samples before ordering?</summary>
+        <p>Yes. The sample cost is adjusted against your first order.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if goods arrive defective?</summary>
+        <p>Defective or incorrectly shipped goods can be returned or exchanged within 7 days of delivery. Every product also carries a 6-month warranty against material and workmanship defects.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I visit the factory?</summary>
+        <p>Yes, by appointment for wholesale buyers. Our factory is at Meghdoot Signature, Waliv Phata, Sativali, Vasai East.</p>
+      </details>
     </div>
   </div>
 </section>
