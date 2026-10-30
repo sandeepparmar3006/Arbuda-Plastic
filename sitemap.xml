@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.arbudaplastic.co.in/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.arbudaplastic.co.in/products.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -149,6 +149,10 @@
       <image:title>Safar EVA footwear</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Safari.webp</image:loc>
+      <image:title>Safari EVA footwear</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://www.arbudaplastic.co.in/Products/Samrat.webp</image:loc>
       <image:title>Samrat EVA footwear</image:title>
     </image:image>
@@ -191,6 +195,10 @@
     <image:image>
       <image:loc>https://www.arbudaplastic.co.in/Products/Young-Lady.webp</image:loc>
       <image:title>Young Lady EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Zeenat.webp</image:loc>
+      <image:title>Zeenat EVA footwear</image:title>
     </image:image>
   </url>
 </urlset>
