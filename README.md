@@ -12,7 +12,7 @@ Arbuda Plastic manufactures and wholesales PVC and EVA footwear under its own br
 
 ## What the site does
 
-- **Product catalog** — 47 styles across PVC and EVA footwear, with colours per style and category and size filters, organized for quick scanning by a B2B buyer, with a downloadable PDF catalogue
+- **Product catalog** — 48 styles across PVC and EVA footwear, with colours per style and category and size filters, organized for quick scanning by a B2B buyer, with a downloadable PDF catalogue
 - **Production journey** — a photo strip of the actual factory floor (raw material → moulding → finishing → dispatch), plus a registered-facility card tying back to the GSTIN
 - **Lead capture** — phone, WhatsApp (pre-filled message), and email, visible at every scroll depth
 - **Trust signals** — founding year, full factory address, GSTIN, minimum order quantities, IndiaMART and Facebook presence, warranty/return policy

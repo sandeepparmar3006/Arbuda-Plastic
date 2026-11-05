@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.arbudaplastic.co.in/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.arbudaplastic.co.in/products.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -87,6 +87,10 @@
     <image:image>
       <image:loc>https://www.arbudaplastic.co.in/Products/Honey-Rose.webp</image:loc>
       <image:title>Honey Rose EVA footwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.arbudaplastic.co.in/Products/Jasmine.webp</image:loc>
+      <image:title>Jasmine EVA footwear</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.arbudaplastic.co.in/Products/Jyoti.webp</image:loc>
