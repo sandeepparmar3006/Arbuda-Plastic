@@ -37,7 +37,7 @@
 
   /* state */
   var allProducts   = [];
-  var activeFilter  = 'all';
+  var activeFilters = [];
   var activeSize    = 'all';
   var activeProduct = null;
   var activePhoto   = 0;
@@ -99,15 +99,24 @@
     document.head.appendChild(el);
   }
 
+  /* filters: OR within a group (EVA + PVC), AND across groups (EVA + Women) */
+  function matchesFilters(p) {
+    var groups = {};
+    activeFilters.forEach(function (f) { (groups[f.group] = groups[f.group] || []).push(f.value); });
+    return Object.keys(groups).every(function (g) {
+      return groups[g].some(function (v) {
+        return p.material === v || (p.type && p.type.indexOf(v) !== -1);
+      });
+    });
+  }
+
   /* render grid */
   function renderGrid() {
     Array.from(grid.querySelectorAll('.product-card')).forEach(function (c) { c.remove(); });
     var visible = 0;
 
     allProducts.forEach(function (p, idx) {
-      var show = (activeFilter === 'all' ||
-                  p.material === activeFilter ||
-                  (p.type && p.type.indexOf(activeFilter) !== -1)) &&
+      var show = matchesFilters(p) &&
                  (activeSize === 'all' || (p.sizes && p.sizes.indexOf(activeSize) !== -1));
       var card = document.createElement('div');
       card.className = 'product-card';
@@ -171,9 +180,18 @@
   /* filter */
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      activeFilter = btn.dataset.filter;
+      var value = btn.dataset.filter;
+      if (value === 'all') {
+        activeFilters = [];
+      } else {
+        var i = activeFilters.findIndex(function (f) { return f.value === value; });
+        if (i === -1) activeFilters.push({ group: btn.dataset.group, value: value });
+        else activeFilters.splice(i, 1);
+      }
       filterBtns.forEach(function (b) {
-        var active = b === btn;
+        var active = b.dataset.filter === 'all'
+          ? activeFilters.length === 0
+          : activeFilters.some(function (f) { return f.value === b.dataset.filter; });
         b.classList.toggle('active', active);
         b.setAttribute('aria-pressed', String(active));
       });
