@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Arbuda Plastic</title>
+  <meta name="description" content="How the Arbuda Plastic website handles visitor data. No forms, no cookies set by the site, cookieless analytics." />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "f5ffb615c99d4db88549c4066597ac6b"}'></script>
+
+  <link rel="canonical" href="https://www.arbudaplastic.co.in/privacy.html" />
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <style>
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/inter-latin-var.woff2) format('woff2'); }
+    @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 500 800; font-display: swap; src: url(assets/fonts/archivo-latin-var.woff2) format('woff2'); }
+  </style>
+
+  <style>
+    :root {
+      --navy:       #000033;
+      --crimson:    #B30000;
+      --crimson-dk: #8C0000;
+      --bg:         #F7F7F5;
+      --surface:    #FFFFFF;
+      --border:     rgba(0,0,51,.09);
+      --muted:      #5E6B80;
+      --text:       #1A1A2E;
+      --font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+      --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      --r-sm: 12px; --r-md: 18px; --r-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(0,0,51,.05);
+      --shadow-md: 0 8px 28px rgba(0,0,51,.08);
+      --shadow-lg: 0 24px 64px rgba(0,0,51,.14);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+    :focus-visible { outline: 2px solid var(--crimson); outline-offset: 3px; border-radius: 4px; }
+
+    /* skip link */
+    .skip-nav { position: absolute; left: -9999px; top: 8px; background: var(--crimson); color: #fff; padding: 8px 16px; border-radius: var(--r-sm); font-weight: 600; font-size: 14px; z-index: 9999; }
+    .skip-nav:focus { left: 8px; }
+
+    /* nav */
+    header { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(247,247,245,.92); border-bottom: 1px solid var(--border); transition: box-shadow .25s; }
+    header.scrolled { box-shadow: var(--shadow-md); }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 16px 0; }
+    .logo { display: flex; flex-direction: column; }
+    .logo-mark { display: flex; align-items: center; gap: 6px; }
+    .logo-kabp { color: var(--navy); font-style: italic; font-weight: 900; font-size: 18px; letter-spacing: .03em; }
+    .logo-name { color: var(--crimson); font-size: 21px; font-weight: 700; letter-spacing: .04em; }
+    .logo-sub { display: block; font-size: 11px; color: var(--muted); margin-top: 1px; font-weight: 500; letter-spacing: .02em; }
+    .nav-links { display: flex; gap: 4px; font-size: 14px; font-weight: 500; }
+    .nav-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border-radius: var(--r-sm); color: var(--muted); transition: color .2s, background .2s; }
+    .nav-links a:hover { color: var(--navy); background: rgba(0,0,51,.05); }
+    .nav-links a[aria-current="page"] { color: var(--navy); font-weight: 600; background: rgba(0,0,51,.05); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 9px 20px; background: var(--crimson); color: #fff !important; border-radius: 999px; font-weight: 600; font-size: 14px; transition: background .2s, transform .2s; }
+    .nav-cta:hover { background: var(--crimson-dk) !important; transform: translateY(-1px); }
+    .menu-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--navy); }
+    .icon-close { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+    /* layout */
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    .page-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); }
+    .page-header h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: var(--navy); line-height: 1.15; margin-bottom: 8px; }
+    .page-header p { font-size: 15px; color: var(--muted); }
+    .policy { max-width: 720px; padding: 40px 0 80px; }
+    .policy h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--navy); margin: 32px 0 8px; }
+    .policy p { margin-bottom: 12px; }
+    .policy a { color: var(--crimson-dk); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 760px) { .logo-sub { display: none; } .nav-links a:not(.nav-cta) { padding: 8px 10px; } }
+
+    footer { border-top: 1px solid var(--border); padding: 22px 0; }
+    .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); align-items: center; }
+    .foot-legal { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .foot-legal a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+    .foot-legal a:hover { color: var(--navy); }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<header id="site-header">
+  <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-mark">
+        <span class="logo-kabp">KABP</span>
+        <span class="logo-name">ARBUDA PLASTIC</span>
+      </div>
+      <span class="logo-sub">PVC &amp; EVA Footwear Manufacturer</span>
+    </a>
+    <div class="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <div class="wrap">
+    <div class="page-header">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: November 2026</p>
+    </div>
+    <div class="policy">
+      <h2>Who we are</h2>
+      <p>Arbuda Plastic (KABP&reg;), Vasai, Maharashtra. GSTIN 27AGUPP3374Q1Z8. Contact: <a href="mailto:arbudaplastic123@yahoo.in">arbudaplastic123@yahoo.in</a>, <a href="tel:+919821351511">+91 98213 51511</a>.</p>
+
+      <h2>What this website collects</h2>
+      <p>This website has no forms, no accounts and no checkout. We do not ask for or store your name, phone number or email address through the site.</p>
+
+      <h2>Analytics</h2>
+      <p>We use Cloudflare Web Analytics to count visits and see which pages are read. It does not use cookies and does not track you across other websites.</p>
+
+      <h2>Maps</h2>
+      <p>The contact section loads a Google Maps embed. Google may set cookies when it loads. See Google's privacy policy for details.</p>
+
+      <h2>Enquiries</h2>
+      <p>If you contact us by WhatsApp, phone or email, we receive your number or email address and your message. We use it only to reply and to process your order. We do not sell or share it. WhatsApp is run by Meta and email by your provider, so their policies apply to those messages.</p>
+
+      <h2>Deleting your data</h2>
+      <p>To have your enquiry details deleted, email or call us and we will remove them.</p>
+
+      <h2>Changes</h2>
+      <p>We may update this page. The date above shows the latest version.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>KABP&reg; Arbuda Plastic &middot; Vasai, Maharashtra</span>
+    <div class="foot-legal">
+      <span>GSTIN: 27AGUPP3374Q1Z8</span>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <span>&copy; <span id="footYear"></span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/year.js" defer></script>
+
+</body>
+</html>
